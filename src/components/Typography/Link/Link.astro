@@ -1,0 +1,13 @@
+---
+import { LinkClasses, type LinkProps, VariantClasses } from "./Link.types.ts";
+
+const { ...linkProps }: LinkProps = Astro.props;
+const { as: Tag = "a", asChild, variant = "plain", ...props } = linkProps;
+const variantClasses = VariantClasses[variant];
+---
+
+{asChild ?
+<slot class:list={[LinkClasses, variantClasses]} {...props} /> :
+<Tag class:list={[LinkClasses, variantClasses]} {...props}>
+  <slot />
+</Tag>}
