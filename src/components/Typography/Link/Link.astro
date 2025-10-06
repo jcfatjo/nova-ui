@@ -1,13 +1,29 @@
 ---
-import { LinkClasses, type LinkProps, VariantClasses } from "./Link.types.ts";
+import "./Link.styles.css";
+
+import type { LinkProps } from "./Link.types.ts";
 
 const { ...linkProps }: LinkProps = Astro.props;
-const { as: Tag = "a", asChild, variant = "plain", ...props } = linkProps;
-const variantClasses = VariantClasses[variant];
+const {
+  class: className,
+  asChild = false,
+  as: Tag = "a",
+  variant = "plain",
+  colorPalette = "gray",
+  ...props
+} = linkProps;
 ---
 
-{asChild ?
-<slot class:list={[LinkClasses, variantClasses]} {...props} /> :
-<Tag class:list={[LinkClasses, variantClasses]} {...props}>
-  <slot />
-</Tag>}
+<style define:vars={{
+  "nova-colors-color-palette-fg": `var(--nova-colors-${colorPalette}-800)`,
+  "mix-textDecorationColor": "color-mix(in srgb, currentColor 20%, transparent)",
+}}>
+</style>
+
+<link-component class={`link ${variant}`} class:list={[className]} {...props} hidden>
+  {asChild ?
+    <slot /> :
+    <Tag>
+      <slot />
+    </Tag>}
+</link-component>
