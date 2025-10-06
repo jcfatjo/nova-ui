@@ -1,0 +1,22 @@
+---
+import { DISABLED_CLASS_LIST } from "../../Components.constants.ts";
+import { BUTTON_CLASS_LIST, type ButtonProps, SizeClassLists, VariantClassLists } from "./Button.types.ts";
+
+const { ...buttonProps }: ButtonProps = Astro.props;
+const { asChild = false, as: Tag = "button", size = "md", variant = "solid", class: className, ...props } = buttonProps;
+
+const sizeClassList = SizeClassLists[size];
+const variantClassList = VariantClassLists[variant];
+---
+
+<button-component
+  class:list={[BUTTON_CLASS_LIST, sizeClassList, variantClassList, DISABLED_CLASS_LIST, className]}
+  {...props}
+  hidden
+>
+  {asChild ?
+    <slot /> :
+    <Tag>
+      <slot />
+    </Tag>}
+</button-component>
