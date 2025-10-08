@@ -17,7 +17,7 @@
     @apply inline-flex items-center outline-none gap-1.5 cursor-pointer rounded-xs;
 
     @variant plain {
-      @apply text-(--nova-colors-color-palette-fg);
+      @apply text-(--nova-color-palette-fg);
 
       @variant hover {
         @apply underline underline-offset-[3px] decoration-(--mix-textDecorationColor);
@@ -25,7 +25,7 @@
     }
 
     @variant underline {
-      @apply text-(--nova-colors-color-palette-fg) underline underline-offset-[3px] decoration-(--mix-textDecorationColor);
+      @apply text-(--nova-color-palette-fg) underline underline-offset-[3px] decoration-(--mix-textDecorationColor);
     }
   }
 }
