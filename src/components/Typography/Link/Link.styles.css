@@ -1,13 +1,13 @@
 @reference "tailwindcss";
 
 @layer components {
-  .link {
+  .nova-link {
     --mix-textDecorationColor: color-mix(in srgb, currentColor 20%, transparent);
 
     @apply inline-flex items-center outline-none gap-1.5 cursor-pointer rounded-xs;
   }
 
-  .link.variant-plain {
+  .nova-link.variant-plain {
     @apply text-(--nova-color-palette-fg);
 
     @variant hover {
@@ -15,7 +15,7 @@
     }
   }
 
-  .link.variant-underline {
+  .nova-link.variant-underline {
     @apply text-(--nova-color-palette-fg) underline underline-offset-[3px] decoration-(--mix-textDecorationColor);
   }
 }
