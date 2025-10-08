@@ -1,16 +1,23 @@
 ---
-import { DISABLED_CLASS_LIST } from "../../Components.constants.ts";
-import { BUTTON_CLASS_LIST, type ButtonProps, SizeClassLists, VariantClassLists } from "./Button.types.ts";
+import "./Button.styles.css";
+
+import type { ButtonProps } from "./Button.types.ts";
 
 const { ...buttonProps }: ButtonProps = Astro.props;
-const { asChild = false, as: Tag = "button", size = "md", variant = "solid", class: className, ...props } = buttonProps;
-
-const sizeClassList = SizeClassLists[size];
-const variantClassList = VariantClassLists[variant];
+const {
+  class: className,
+  asChild = false,
+  as: Tag = "button",
+  size = "md",
+  variant = "solid",
+  colorPalette = "gray",
+  ...props
+} = buttonProps;
 ---
 
 <button-component
-  class:list={[BUTTON_CLASS_LIST, sizeClassList, variantClassList, DISABLED_CLASS_LIST, className]}
+  class={`nova-button size-${size} variant-${variant} color-palette-${colorPalette}`}
+  class:list={[className]}
   {...props}
   hidden
 >
