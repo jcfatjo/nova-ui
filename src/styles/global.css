@@ -705,3 +705,487 @@
     --nova-color-stone-focus-ring: var(--color-stone-400);
   }
 }
+
+.color-palette-red {
+  --nova-color-palette-50: var(--nova-color-red-50);
+  --nova-color-palette-100: var(--nova-color-red-100);
+  --nova-color-palette-200: var(--nova-color-red-200);
+  --nova-color-palette-300: var(--nova-color-red-300);
+  --nova-color-palette-400: var(--nova-color-red-400);
+  --nova-color-palette-500: var(--nova-color-red-500);
+  --nova-color-palette-600: var(--nova-color-red-600);
+  --nova-color-palette-700: var(--nova-color-red-700);
+  --nova-color-palette-800: var(--nova-color-red-800);
+  --nova-color-palette-900: var(--nova-color-red-900);
+  --nova-color-palette-950: var(--nova-color-red-950);
+
+  --nova-color-palette-contrast: var(--nova-color-red-contrast);
+  --nova-color-palette-fg: var(--nova-color-red-fg);
+  --nova-color-palette-subtle: var(--nova-color-red-subtle);
+  --nova-color-palette-muted: var(--nova-color-red-muted);
+  --nova-color-palette-emphasized: var(--nova-color-red-emphasized);
+  --nova-color-palette-solid: var(--nova-color-red-solid);
+  --nova-color-palette-focus-ring: var(--nova-color-red-focus-ring);
+}
+
+.color-palette-orange {
+  --nova-color-palette-50: var(--nova-color-orange-50);
+  --nova-color-palette-100: var(--nova-color-orange-100);
+  --nova-color-palette-200: var(--nova-color-orange-200);
+  --nova-color-palette-300: var(--nova-color-orange-300);
+  --nova-color-palette-400: var(--nova-color-orange-400);
+  --nova-color-palette-500: var(--nova-color-orange-500);
+  --nova-color-palette-600: var(--nova-color-orange-600);
+  --nova-color-palette-700: var(--nova-color-orange-700);
+  --nova-color-palette-800: var(--nova-color-orange-800);
+  --nova-color-palette-900: var(--nova-color-orange-900);
+  --nova-color-palette-950: var(--nova-color-orange-950);
+
+  --nova-color-palette-contrast: var(--nova-color-orange-contrast);
+  --nova-color-palette-fg: var(--nova-color-orange-fg);
+  --nova-color-palette-subtle: var(--nova-color-orange-subtle);
+  --nova-color-palette-muted: var(--nova-color-orange-muted);
+  --nova-color-palette-emphasized: var(--nova-color-orange-emphasized);
+  --nova-color-palette-solid: var(--nova-color-orange-solid);
+  --nova-color-palette-focus-ring: var(--nova-color-orange-focus-ring);
+}
+
+.color-palette-amber {
+  --nova-color-palette-50: var(--nova-color-amber-50);
+  --nova-color-palette-100: var(--nova-color-amber-100);
+  --nova-color-palette-200: var(--nova-color-amber-200);
+  --nova-color-palette-300: var(--nova-color-amber-300);
+  --nova-color-palette-400: var(--nova-color-amber-400);
+  --nova-color-palette-500: var(--nova-color-amber-500);
+  --nova-color-palette-600: var(--nova-color-amber-600);
+  --nova-color-palette-700: var(--nova-color-amber-700);
+  --nova-color-palette-800: var(--nova-color-amber-800);
+  --nova-color-palette-900: var(--nova-color-amber-900);
+  --nova-color-palette-950: var(--nova-color-amber-950);
+
+  --nova-color-palette-contrast: var(--nova-color-amber-contrast);
+  --nova-color-palette-fg: var(--nova-color-amber-fg);
+  --nova-color-palette-subtle: var(--nova-color-amber-subtle);
+  --nova-color-palette-muted: var(--nova-color-amber-muted);
+  --nova-color-palette-emphasized: var(--nova-color-amber-emphasized);
+  --nova-color-palette-solid: var(--nova-color-amber-solid);
+  --nova-color-palette-focus-ring: var(--nova-color-amber-focus-ring);
+}
+
+.color-palette-yellow {
+  --nova-color-palette-50: var(--nova-color-yellow-50);
+  --nova-color-palette-100: var(--nova-color-yellow-100);
+  --nova-color-palette-200: var(--nova-color-yellow-200);
+  --nova-color-palette-300: var(--nova-color-yellow-300);
+  --nova-color-palette-400: var(--nova-color-yellow-400);
+  --nova-color-palette-500: var(--nova-color-yellow-500);
+  --nova-color-palette-600: var(--nova-color-yellow-600);
+  --nova-color-palette-700: var(--nova-color-yellow-700);
+  --nova-color-palette-800: var(--nova-color-yellow-800);
+  --nova-color-palette-900: var(--nova-color-yellow-900);
+  --nova-color-palette-950: var(--nova-color-yellow-950);
+
+  --nova-color-palette-contrast: var(--nova-color-yellow-contrast);
+  --nova-color-palette-fg: var(--nova-color-yellow-fg);
+  --nova-color-palette-subtle: var(--nova-color-yellow-subtle);
+  --nova-color-palette-muted: var(--nova-color-yellow-muted);
+  --nova-color-palette-emphasized: var(--nova-color-yellow-emphasized);
+  --nova-color-palette-solid: var(--nova-color-yellow-solid);
+  --nova-color-palette-focus-ring: var(--nova-color-yellow-focus-ring);
+}
+
+.color-palette-lime {
+  --nova-color-palette-50: var(--nova-color-lime-50);
+  --nova-color-palette-100: var(--nova-color-lime-100);
+  --nova-color-palette-200: var(--nova-color-lime-200);
+  --nova-color-palette-300: var(--nova-color-lime-300);
+  --nova-color-palette-400: var(--nova-color-lime-400);
+  --nova-color-palette-500: var(--nova-color-lime-500);
+  --nova-color-palette-600: var(--nova-color-lime-600);
+  --nova-color-palette-700: var(--nova-color-lime-700);
+  --nova-color-palette-800: var(--nova-color-lime-800);
+  --nova-color-palette-900: var(--nova-color-lime-900);
+  --nova-color-palette-950: var(--nova-color-lime-950);
+
+  --nova-color-palette-contrast: var(--nova-color-lime-contrast);
+  --nova-color-palette-fg: var(--nova-color-lime-fg);
+  --nova-color-palette-subtle: var(--nova-color-lime-subtle);
+  --nova-color-palette-muted: var(--nova-color-lime-muted);
+  --nova-color-palette-emphasized: var(--nova-color-lime-emphasized);
+  --nova-color-palette-solid: var(--nova-color-lime-solid);
+  --nova-color-palette-focus-ring: var(--nova-color-lime-focus-ring);
+}
+
+.color-palette-green {
+  --nova-color-palette-50: var(--nova-color-green-50);
+  --nova-color-palette-100: var(--nova-color-green-100);
+  --nova-color-palette-200: var(--nova-color-green-200);
+  --nova-color-palette-300: var(--nova-color-green-300);
+  --nova-color-palette-400: var(--nova-color-green-400);
+  --nova-color-palette-500: var(--nova-color-green-500);
+  --nova-color-palette-600: var(--nova-color-green-600);
+  --nova-color-palette-700: var(--nova-color-green-700);
+  --nova-color-palette-800: var(--nova-color-green-800);
+  --nova-color-palette-900: var(--nova-color-green-900);
+  --nova-color-palette-950: var(--nova-color-green-950);
+
+  --nova-color-palette-contrast: var(--nova-color-green-contrast);
+  --nova-color-palette-fg: var(--nova-color-green-fg);
+  --nova-color-palette-subtle: var(--nova-color-green-subtle);
+  --nova-color-palette-muted: var(--nova-color-green-muted);
+  --nova-color-palette-emphasized: var(--nova-color-green-emphasized);
+  --nova-color-palette-solid: var(--nova-color-green-solid);
+  --nova-color-palette-focus-ring: var(--nova-color-green-focus-ring);
+}
+
+.color-palette-emerald {
+  --nova-color-palette-50: var(--nova-color-emerald-50);
+  --nova-color-palette-100: var(--nova-color-emerald-100);
+  --nova-color-palette-200: var(--nova-color-emerald-200);
+  --nova-color-palette-300: var(--nova-color-emerald-300);
+  --nova-color-palette-400: var(--nova-color-emerald-400);
+  --nova-color-palette-500: var(--nova-color-emerald-500);
+  --nova-color-palette-600: var(--nova-color-emerald-600);
+  --nova-color-palette-700: var(--nova-color-emerald-700);
+  --nova-color-palette-800: var(--nova-color-emerald-800);
+  --nova-color-palette-900: var(--nova-color-emerald-900);
+  --nova-color-palette-950: var(--nova-color-emerald-950);
+
+  --nova-color-palette-contrast: var(--nova-color-emerald-contrast);
+  --nova-color-palette-fg: var(--nova-color-emerald-fg);
+  --nova-color-palette-subtle: var(--nova-color-emerald-subtle);
+  --nova-color-palette-muted: var(--nova-color-emerald-muted);
+  --nova-color-palette-emphasized: var(--nova-color-emerald-emphasized);
+  --nova-color-palette-solid: var(--nova-color-emerald-solid);
+  --nova-color-palette-focus-ring: var(--nova-color-emerald-focus-ring);
+}
+
+.color-palette-teal {
+  --nova-color-palette-50: var(--nova-color-teal-50);
+  --nova-color-palette-100: var(--nova-color-teal-100);
+  --nova-color-palette-200: var(--nova-color-teal-200);
+  --nova-color-palette-300: var(--nova-color-teal-300);
+  --nova-color-palette-400: var(--nova-color-teal-400);
+  --nova-color-palette-500: var(--nova-color-teal-500);
+  --nova-color-palette-600: var(--nova-color-teal-600);
+  --nova-color-palette-700: var(--nova-color-teal-700);
+  --nova-color-palette-800: var(--nova-color-teal-800);
+  --nova-color-palette-900: var(--nova-color-teal-900);
+  --nova-color-palette-950: var(--nova-color-teal-950);
+
+  --nova-color-palette-contrast: var(--nova-color-teal-contrast);
+  --nova-color-palette-fg: var(--nova-color-teal-fg);
+  --nova-color-palette-subtle: var(--nova-color-teal-subtle);
+  --nova-color-palette-muted: var(--nova-color-teal-muted);
+  --nova-color-palette-emphasized: var(--nova-color-teal-emphasized);
+  --nova-color-palette-solid: var(--nova-color-teal-solid);
+  --nova-color-palette-focus-ring: var(--nova-color-teal-focus-ring);
+}
+
+.color-palette-cyan {
+  --nova-color-palette-50: var(--nova-color-cyan-50);
+  --nova-color-palette-100: var(--nova-color-cyan-100);
+  --nova-color-palette-200: var(--nova-color-cyan-200);
+  --nova-color-palette-300: var(--nova-color-cyan-300);
+  --nova-color-palette-400: var(--nova-color-cyan-400);
+  --nova-color-palette-500: var(--nova-color-cyan-500);
+  --nova-color-palette-600: var(--nova-color-cyan-600);
+  --nova-color-palette-700: var(--nova-color-cyan-700);
+  --nova-color-palette-800: var(--nova-color-cyan-800);
+  --nova-color-palette-900: var(--nova-color-cyan-900);
+  --nova-color-palette-950: var(--nova-color-cyan-950);
+
+  --nova-color-palette-contrast: var(--nova-color-cyan-contrast);
+  --nova-color-palette-fg: var(--nova-color-cyan-fg);
+  --nova-color-palette-subtle: var(--nova-color-cyan-subtle);
+  --nova-color-palette-muted: var(--nova-color-cyan-muted);
+  --nova-color-palette-emphasized: var(--nova-color-cyan-emphasized);
+  --nova-color-palette-solid: var(--nova-color-cyan-solid);
+  --nova-color-palette-focus-ring: var(--nova-color-cyan-focus-ring);
+}
+
+.color-palette-sky {
+  --nova-color-palette-50: var(--nova-color-sky-50);
+  --nova-color-palette-100: var(--nova-color-sky-100);
+  --nova-color-palette-200: var(--nova-color-sky-200);
+  --nova-color-palette-300: var(--nova-color-sky-300);
+  --nova-color-palette-400: var(--nova-color-sky-400);
+  --nova-color-palette-500: var(--nova-color-sky-500);
+  --nova-color-palette-600: var(--nova-color-sky-600);
+  --nova-color-palette-700: var(--nova-color-sky-700);
+  --nova-color-palette-800: var(--nova-color-sky-800);
+  --nova-color-palette-900: var(--nova-color-sky-900);
+  --nova-color-palette-950: var(--nova-color-sky-950);
+
+  --nova-color-palette-contrast: var(--nova-color-sky-contrast);
+  --nova-color-palette-fg: var(--nova-color-sky-fg);
+  --nova-color-palette-subtle: var(--nova-color-sky-subtle);
+  --nova-color-palette-muted: var(--nova-color-sky-muted);
+  --nova-color-palette-emphasized: var(--nova-color-sky-emphasized);
+  --nova-color-palette-solid: var(--nova-color-sky-solid);
+  --nova-color-palette-focus-ring: var(--nova-color-sky-focus-ring);
+}
+
+.color-palette-blue {
+  --nova-color-palette-50: var(--nova-color-blue-50);
+  --nova-color-palette-100: var(--nova-color-blue-100);
+  --nova-color-palette-200: var(--nova-color-blue-200);
+  --nova-color-palette-300: var(--nova-color-blue-300);
+  --nova-color-palette-400: var(--nova-color-blue-400);
+  --nova-color-palette-500: var(--nova-color-blue-500);
+  --nova-color-palette-600: var(--nova-color-blue-600);
+  --nova-color-palette-700: var(--nova-color-blue-700);
+  --nova-color-palette-800: var(--nova-color-blue-800);
+  --nova-color-palette-900: var(--nova-color-blue-900);
+  --nova-color-palette-950: var(--nova-color-blue-950);
+
+  --nova-color-palette-contrast: var(--nova-color-blue-contrast);
+  --nova-color-palette-fg: var(--nova-color-blue-fg);
+  --nova-color-palette-subtle: var(--nova-color-blue-subtle);
+  --nova-color-palette-muted: var(--nova-color-blue-muted);
+  --nova-color-palette-emphasized: var(--nova-color-blue-emphasized);
+  --nova-color-palette-solid: var(--nova-color-blue-solid);
+  --nova-color-palette-focus-ring: var(--nova-color-blue-focus-ring);
+}
+
+.color-palette-indigo {
+  --nova-color-palette-50: var(--nova-color-indigo-50);
+  --nova-color-palette-100: var(--nova-color-indigo-100);
+  --nova-color-palette-200: var(--nova-color-indigo-200);
+  --nova-color-palette-300: var(--nova-color-indigo-300);
+  --nova-color-palette-400: var(--nova-color-indigo-400);
+  --nova-color-palette-500: var(--nova-color-indigo-500);
+  --nova-color-palette-600: var(--nova-color-indigo-600);
+  --nova-color-palette-700: var(--nova-color-indigo-700);
+  --nova-color-palette-800: var(--nova-color-indigo-800);
+  --nova-color-palette-900: var(--nova-color-indigo-900);
+  --nova-color-palette-950: var(--nova-color-indigo-950);
+
+  --nova-color-palette-contrast: var(--nova-color-indigo-contrast);
+  --nova-color-palette-fg: var(--nova-color-indigo-fg);
+  --nova-color-palette-subtle: var(--nova-color-indigo-subtle);
+  --nova-color-palette-muted: var(--nova-color-indigo-muted);
+  --nova-color-palette-emphasized: var(--nova-color-indigo-emphasized);
+  --nova-color-palette-solid: var(--nova-color-indigo-solid);
+  --nova-color-palette-focus-ring: var(--nova-color-indigo-focus-ring);
+}
+
+.color-palette-violet {
+  --nova-color-palette-50: var(--nova-color-violet-50);
+  --nova-color-palette-100: var(--nova-color-violet-100);
+  --nova-color-palette-200: var(--nova-color-violet-200);
+  --nova-color-palette-300: var(--nova-color-violet-300);
+  --nova-color-palette-400: var(--nova-color-violet-400);
+  --nova-color-palette-500: var(--nova-color-violet-500);
+  --nova-color-palette-600: var(--nova-color-violet-600);
+  --nova-color-palette-700: var(--nova-color-violet-700);
+  --nova-color-palette-800: var(--nova-color-violet-800);
+  --nova-color-palette-900: var(--nova-color-violet-900);
+  --nova-color-palette-950: var(--nova-color-violet-950);
+
+  --nova-color-palette-contrast: var(--nova-color-violet-contrast);
+  --nova-color-palette-fg: var(--nova-color-violet-fg);
+  --nova-color-palette-subtle: var(--nova-color-violet-subtle);
+  --nova-color-palette-muted: var(--nova-color-violet-muted);
+  --nova-color-palette-emphasized: var(--nova-color-violet-emphasized);
+  --nova-color-palette-solid: var(--nova-color-violet-solid);
+  --nova-color-palette-focus-ring: var(--nova-color-violet-focus-ring);
+}
+
+.color-palette-purple {
+  --nova-color-palette-50: var(--nova-color-purple-50);
+  --nova-color-palette-100: var(--nova-color-purple-100);
+  --nova-color-palette-200: var(--nova-color-purple-200);
+  --nova-color-palette-300: var(--nova-color-purple-300);
+  --nova-color-palette-400: var(--nova-color-purple-400);
+  --nova-color-palette-500: var(--nova-color-purple-500);
+  --nova-color-palette-600: var(--nova-color-purple-600);
+  --nova-color-palette-700: var(--nova-color-purple-700);
+  --nova-color-palette-800: var(--nova-color-purple-800);
+  --nova-color-palette-900: var(--nova-color-purple-900);
+  --nova-color-palette-950: var(--nova-color-purple-950);
+
+  --nova-color-palette-contrast: var(--nova-color-purple-contrast);
+  --nova-color-palette-fg: var(--nova-color-purple-fg);
+  --nova-color-palette-subtle: var(--nova-color-purple-subtle);
+  --nova-color-palette-muted: var(--nova-color-purple-muted);
+  --nova-color-palette-emphasized: var(--nova-color-purple-emphasized);
+  --nova-color-palette-solid: var(--nova-color-purple-solid);
+  --nova-color-palette-focus-ring: var(--nova-color-purple-focus-ring);
+}
+
+.color-palette-fuchsia {
+  --nova-color-palette-50: var(--nova-color-fuchsia-50);
+  --nova-color-palette-100: var(--nova-color-fuchsia-100);
+  --nova-color-palette-200: var(--nova-color-fuchsia-200);
+  --nova-color-palette-300: var(--nova-color-fuchsia-300);
+  --nova-color-palette-400: var(--nova-color-fuchsia-400);
+  --nova-color-palette-500: var(--nova-color-fuchsia-500);
+  --nova-color-palette-600: var(--nova-color-fuchsia-600);
+  --nova-color-palette-700: var(--nova-color-fuchsia-700);
+  --nova-color-palette-800: var(--nova-color-fuchsia-800);
+  --nova-color-palette-900: var(--nova-color-fuchsia-900);
+  --nova-color-palette-950: var(--nova-color-fuchsia-950);
+
+  --nova-color-palette-contrast: var(--nova-color-fuchsia-contrast);
+  --nova-color-palette-fg: var(--nova-color-fuchsia-fg);
+  --nova-color-palette-subtle: var(--nova-color-fuchsia-subtle);
+  --nova-color-palette-muted: var(--nova-color-fuchsia-muted);
+  --nova-color-palette-emphasized: var(--nova-color-fuchsia-emphasized);
+  --nova-color-palette-solid: var(--nova-color-fuchsia-solid);
+  --nova-color-palette-focus-ring: var(--nova-color-fuchsia-focus-ring);
+}
+
+.color-palette-pink {
+  --nova-color-palette-50: var(--nova-color-pink-50);
+  --nova-color-palette-100: var(--nova-color-pink-100);
+  --nova-color-palette-200: var(--nova-color-pink-200);
+  --nova-color-palette-300: var(--nova-color-pink-300);
+  --nova-color-palette-400: var(--nova-color-pink-400);
+  --nova-color-palette-500: var(--nova-color-pink-500);
+  --nova-color-palette-600: var(--nova-color-pink-600);
+  --nova-color-palette-700: var(--nova-color-pink-700);
+  --nova-color-palette-800: var(--nova-color-pink-800);
+  --nova-color-palette-900: var(--nova-color-pink-900);
+  --nova-color-palette-950: var(--nova-color-pink-950);
+
+  --nova-color-palette-contrast: var(--nova-color-pink-contrast);
+  --nova-color-palette-fg: var(--nova-color-pink-fg);
+  --nova-color-palette-subtle: var(--nova-color-pink-subtle);
+  --nova-color-palette-muted: var(--nova-color-pink-muted);
+  --nova-color-palette-emphasized: var(--nova-color-pink-emphasized);
+  --nova-color-palette-solid: var(--nova-color-pink-solid);
+  --nova-color-palette-focus-ring: var(--nova-color-pink-focus-ring);
+}
+
+.color-palette-rose {
+  --nova-color-palette-50: var(--nova-color-rose-50);
+  --nova-color-palette-100: var(--nova-color-rose-100);
+  --nova-color-palette-200: var(--nova-color-rose-200);
+  --nova-color-palette-300: var(--nova-color-rose-300);
+  --nova-color-palette-400: var(--nova-color-rose-400);
+  --nova-color-palette-500: var(--nova-color-rose-500);
+  --nova-color-palette-600: var(--nova-color-rose-600);
+  --nova-color-palette-700: var(--nova-color-rose-700);
+  --nova-color-palette-800: var(--nova-color-rose-800);
+  --nova-color-palette-900: var(--nova-color-rose-900);
+  --nova-color-palette-950: var(--nova-color-rose-950);
+
+  --nova-color-palette-contrast: var(--nova-color-rose-contrast);
+  --nova-color-palette-fg: var(--nova-color-rose-fg);
+  --nova-color-palette-subtle: var(--nova-color-rose-subtle);
+  --nova-color-palette-muted: var(--nova-color-rose-muted);
+  --nova-color-palette-emphasized: var(--nova-color-rose-emphasized);
+  --nova-color-palette-solid: var(--nova-color-rose-solid);
+  --nova-color-palette-focus-ring: var(--nova-color-rose-focus-ring);
+}
+
+.color-palette-slate {
+  --nova-color-palette-50: var(--nova-color-slate-50);
+  --nova-color-palette-100: var(--nova-color-slate-100);
+  --nova-color-palette-200: var(--nova-color-slate-200);
+  --nova-color-palette-300: var(--nova-color-slate-300);
+  --nova-color-palette-400: var(--nova-color-slate-400);
+  --nova-color-palette-500: var(--nova-color-slate-500);
+  --nova-color-palette-600: var(--nova-color-slate-600);
+  --nova-color-palette-700: var(--nova-color-slate-700);
+  --nova-color-palette-800: var(--nova-color-slate-800);
+  --nova-color-palette-900: var(--nova-color-slate-900);
+  --nova-color-palette-950: var(--nova-color-slate-950);
+
+  --nova-color-palette-contrast: var(--nova-color-slate-contrast);
+  --nova-color-palette-fg: var(--nova-color-slate-fg);
+  --nova-color-palette-subtle: var(--nova-color-slate-subtle);
+  --nova-color-palette-muted: var(--nova-color-slate-muted);
+  --nova-color-palette-emphasized: var(--nova-color-slate-emphasized);
+  --nova-color-palette-solid: var(--nova-color-slate-solid);
+  --nova-color-palette-focus-ring: var(--nova-color-slate-focus-ring);
+}
+
+.color-palette-gray {
+  --nova-color-palette-50: var(--nova-color-gray-50);
+  --nova-color-palette-100: var(--nova-color-gray-100);
+  --nova-color-palette-200: var(--nova-color-gray-200);
+  --nova-color-palette-300: var(--nova-color-gray-300);
+  --nova-color-palette-400: var(--nova-color-gray-400);
+  --nova-color-palette-500: var(--nova-color-gray-500);
+  --nova-color-palette-600: var(--nova-color-gray-600);
+  --nova-color-palette-700: var(--nova-color-gray-700);
+  --nova-color-palette-800: var(--nova-color-gray-800);
+  --nova-color-palette-900: var(--nova-color-gray-900);
+  --nova-color-palette-950: var(--nova-color-gray-950);
+
+  --nova-color-palette-contrast: var(--nova-color-gray-contrast);
+  --nova-color-palette-fg: var(--nova-color-gray-fg);
+  --nova-color-palette-subtle: var(--nova-color-gray-subtle);
+  --nova-color-palette-muted: var(--nova-color-gray-muted);
+  --nova-color-palette-emphasized: var(--nova-color-gray-emphasized);
+  --nova-color-palette-solid: var(--nova-color-gray-solid);
+  --nova-color-palette-focus-ring: var(--nova-color-gray-focus-ring);
+}
+
+.color-palette-zinc {
+  --nova-color-palette-50: var(--nova-color-zinc-50);
+  --nova-color-palette-100: var(--nova-color-zinc-100);
+  --nova-color-palette-200: var(--nova-color-zinc-200);
+  --nova-color-palette-300: var(--nova-color-zinc-300);
+  --nova-color-palette-400: var(--nova-color-zinc-400);
+  --nova-color-palette-500: var(--nova-color-zinc-500);
+  --nova-color-palette-600: var(--nova-color-zinc-600);
+  --nova-color-palette-700: var(--nova-color-zinc-700);
+  --nova-color-palette-800: var(--nova-color-zinc-800);
+  --nova-color-palette-900: var(--nova-color-zinc-900);
+  --nova-color-palette-950: var(--nova-color-zinc-950);
+
+  --nova-color-palette-contrast: var(--nova-color-zinc-contrast);
+  --nova-color-palette-fg: var(--nova-color-zinc-fg);
+  --nova-color-palette-subtle: var(--nova-color-zinc-subtle);
+  --nova-color-palette-muted: var(--nova-color-zinc-muted);
+  --nova-color-palette-emphasized: var(--nova-color-zinc-emphasized);
+  --nova-color-palette-solid: var(--nova-color-zinc-solid);
+  --nova-color-palette-focus-ring: var(--nova-color-zinc-focus-ring);
+}
+
+.color-palette-neutral {
+  --nova-color-palette-50: var(--nova-color-neutral-50);
+  --nova-color-palette-100: var(--nova-color-neutral-100);
+  --nova-color-palette-200: var(--nova-color-neutral-200);
+  --nova-color-palette-300: var(--nova-color-neutral-300);
+  --nova-color-palette-400: var(--nova-color-neutral-400);
+  --nova-color-palette-500: var(--nova-color-neutral-500);
+  --nova-color-palette-600: var(--nova-color-neutral-600);
+  --nova-color-palette-700: var(--nova-color-neutral-700);
+  --nova-color-palette-800: var(--nova-color-neutral-800);
+  --nova-color-palette-900: var(--nova-color-neutral-900);
+  --nova-color-palette-950: var(--nova-color-neutral-950);
+
+  --nova-color-palette-contrast: var(--nova-color-neutral-contrast);
+  --nova-color-palette-fg: var(--nova-color-neutral-fg);
+  --nova-color-palette-subtle: var(--nova-color-neutral-subtle);
+  --nova-color-palette-muted: var(--nova-color-neutral-muted);
+  --nova-color-palette-emphasized: var(--nova-color-neutral-emphasized);
+  --nova-color-palette-solid: var(--nova-color-neutral-solid);
+  --nova-color-palette-focus-ring: var(--nova-color-neutral-focus-ring);
+}
+
+.color-palette-stone {
+  --nova-color-palette-50: var(--nova-color-stone-50);
+  --nova-color-palette-100: var(--nova-color-stone-100);
+  --nova-color-palette-200: var(--nova-color-stone-200);
+  --nova-color-palette-300: var(--nova-color-stone-300);
+  --nova-color-palette-400: var(--nova-color-stone-400);
+  --nova-color-palette-500: var(--nova-color-stone-500);
+  --nova-color-palette-600: var(--nova-color-stone-600);
+  --nova-color-palette-700: var(--nova-color-stone-700);
+  --nova-color-palette-800: var(--nova-color-stone-800);
+  --nova-color-palette-900: var(--nova-color-stone-900);
+  --nova-color-palette-950: var(--nova-color-stone-950);
+
+  --nova-color-palette-contrast: var(--nova-color-stone-contrast);
+  --nova-color-palette-fg: var(--nova-color-stone-fg);
+  --nova-color-palette-subtle: var(--nova-color-stone-subtle);
+  --nova-color-palette-muted: var(--nova-color-stone-muted);
+  --nova-color-palette-emphasized: var(--nova-color-stone-emphasized);
+  --nova-color-palette-solid: var(--nova-color-stone-solid);
+  --nova-color-palette-focus-ring: var(--nova-color-stone-focus-ring);
+}
