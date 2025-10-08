@@ -1,6 +1,6 @@
-import { BaseComponent } from "../../Base/Base.component.ts";
+import { BaseColorComponent } from "../../Base/Color/BaseColor.component.ts";
 
-export class ButtonComponent extends BaseComponent {
+export class ButtonComponent extends BaseColorComponent {
   public static is = "button-component";
 
   public connectedCallback() {
