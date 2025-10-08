@@ -13,38 +13,21 @@ const {
   ...props
 } = linkProps;
 
-const scope = `mc-${(globalThis.crypto?.randomUUID?.() ?? Math.random().toString(36).slice(2))
-.toString()
-.slice(0, 8)}`;
-
 const css = `
-.link.${scope} {
-  --nova-color-palette-50: var(--nova-color-${colorPalette}-50);
-  --nova-color-palette-100: var(--nova-color-${colorPalette}-100);
-  --nova-color-palette-200: var(--nova-color-${colorPalette}-200);
-  --nova-color-palette-300: var(--nova-color-${colorPalette}-300);
-  --nova-color-palette-400: var(--nova-color-${colorPalette}-400);
-  --nova-color-palette-500: var(--nova-color-${colorPalette}-500);
-  --nova-color-palette-600: var(--nova-color-${colorPalette}-600);
-  --nova-color-palette-700: var(--nova-color-${colorPalette}-700);
-  --nova-color-palette-800: var(--nova-color-${colorPalette}-800);
-  --nova-color-palette-900: var(--nova-color-${colorPalette}-900);
-  --nova-color-palette-950: var(--nova-color-${colorPalette}-950);
-  --nova-color-palette-contrast: var(--nova-color-${colorPalette}-contrast);
-  --nova-color-palette-fg: var(--nova-color-${colorPalette}-fg);
-  --nova-color-palette-subtle: var(--nova-color-${colorPalette}-subtle);
-  --nova-color-palette-muted: var(--nova-color-${colorPalette}-muted);
-  --nova-color-palette-emphasized: var(--nova-color-${colorPalette}-emphasized);
-  --nova-color-palette-solid: var(--nova-color-${colorPalette}-solid);
-  --nova-color-palette-focus-ring: var(--nova-color-${colorPalette}-focus-ring);
+.link.variant-${variant}.color-palette-${colorPalette} {
   --mix-textDecorationColor: color-mix(in srgb, currentColor 20%, transparent);
 }
 `;
 ---
 
-<style is:inline set:html={css}></style>
-
-<link-component class={`link ${scope} ${variant}`} class:list={[className]} {...props} hidden>
+<link-component
+  class={`link variant-${variant} color-palette-${colorPalette}`}
+  class:list={[className]}
+  variant={variant}
+  color-palette={colorPalette}
+  {...props}
+  hidden
+>
   {asChild ?
     <slot /> :
     <Tag>

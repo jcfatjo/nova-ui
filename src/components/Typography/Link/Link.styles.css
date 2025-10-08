@@ -1,13 +1,11 @@
-@import "tailwindcss";
-
 @custom-variant plain {
-  &.plain {
+  &.variant-plain {
     @slot;
   }
 }
 
 @custom-variant underline {
-  &.underline {
+  &.variant-underline {
     @slot;
   }
 }
