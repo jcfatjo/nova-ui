@@ -1,4 +1,4 @@
-import { BaseComponent } from "../../Base.component.ts";
+import { BaseComponent } from "../../Base/Base.component.ts";
 
 export class ButtonComponent extends BaseComponent {
   public static is = "button-component";
