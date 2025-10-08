@@ -1,6 +1,10 @@
-import { HIDDEN_ATTRIBUTE } from "../Buttons/Button/Button.constants.ts";
+import { HIDDEN_ATTR } from "./Base.constants.ts";
 
 export class BaseComponent extends HTMLElement {
+  public static get observedAttributes() {
+    return [""];
+  }
+
   public connectedCallback() {
     this._initContent();
   }
@@ -12,7 +16,7 @@ export class BaseComponent extends HTMLElement {
 
     if (this.hasAttributes()) {
       this.getAttributeNames().forEach(attr => {
-        if (attr === HIDDEN_ATTRIBUTE) {
+        if (attr === HIDDEN_ATTR || BaseComponent.observedAttributes.includes(attr)) {
           return;
         }
 
