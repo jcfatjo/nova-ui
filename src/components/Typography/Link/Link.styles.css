@@ -1,29 +1,21 @@
-@custom-variant plain {
-  &.variant-plain {
-    @slot;
-  }
-}
-
-@custom-variant underline {
-  &.variant-underline {
-    @slot;
-  }
-}
+@reference "tailwindcss";
 
 @layer components {
   .link {
+    --mix-textDecorationColor: color-mix(in srgb, currentColor 20%, transparent);
+
     @apply inline-flex items-center outline-none gap-1.5 cursor-pointer rounded-xs;
+  }
 
-    @variant plain {
-      @apply text-(--nova-color-palette-fg);
+  .link.variant-plain {
+    @apply text-(--nova-color-palette-fg);
 
-      @variant hover {
-        @apply underline underline-offset-[3px] decoration-(--mix-textDecorationColor);
-      }
+    @variant hover {
+      @apply underline underline-offset-[3px] decoration-(--mix-textDecorationColor);
     }
+  }
 
-    @variant underline {
-      @apply text-(--nova-color-palette-fg) underline underline-offset-[3px] decoration-(--mix-textDecorationColor);
-    }
+  .link.variant-underline {
+    @apply text-(--nova-color-palette-fg) underline underline-offset-[3px] decoration-(--mix-textDecorationColor);
   }
 }

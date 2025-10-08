@@ -12,19 +12,11 @@ const {
   colorPalette = "gray",
   ...props
 } = linkProps;
-
-const css = `
-.link.variant-${variant}.color-palette-${colorPalette} {
-  --mix-textDecorationColor: color-mix(in srgb, currentColor 20%, transparent);
-}
-`;
 ---
 
 <link-component
   class={`link variant-${variant} color-palette-${colorPalette}`}
   class:list={[className]}
-  variant={variant}
-  color-palette={colorPalette}
   {...props}
   hidden
 >
