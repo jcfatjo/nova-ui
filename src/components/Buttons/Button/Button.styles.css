@@ -64,7 +64,7 @@
 
   .nova-button.variant-surface {
     --shadow-color: var(--nova-color-palette-muted);
-    --button-shadow: "0 0 0 1px var(--shadow-color)";
+    --button-shadow: 0 0 0 1px var(--shadow-color);
     @apply bg-(--nova-color-palette-subtle) text-(--nova-color-palette-fg) shadow-(--button-shadow) border-transparent;
 
     @variant hover {
