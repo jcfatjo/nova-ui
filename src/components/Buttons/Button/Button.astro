@@ -11,19 +11,48 @@ const {
   size = "md",
   variant = "solid",
   colorPalette = "gray",
+  loading,
+  loadingText,
+  spinner,
+  spinnerPlacement = "start",
   ...props
 } = buttonProps;
+const { disabled } = buttonProps;
 ---
 
 <button-component
   class={`nova-button size-${size} variant-${variant} color-palette-${colorPalette}`}
   class:list={[className]}
   {...props}
+  data-loading={loading}
+  disabled={disabled || loading}
   hidden
 >
   {asChild ?
     <slot /> :
     <Tag>
-      <slot />
+      {loading ?
+        (<span class="loading-content">
+          {spinnerPlacement === "start" && (
+            loadingText ?
+              (spinner ? spinner : <span>[]</span>) :
+              (<span class="spinner-wrapper">
+                {spinner ? spinner : <span>[]</span>}
+              </span>)
+          )}
+          {loadingText ?
+            loadingText :
+            <span class="text-wrapper">
+              <slot />
+            </span>}
+          {spinnerPlacement === "end" && (
+            loadingText ?
+              (spinner ? spinner : <span>[]</span>) :
+              (<span class="spinner-wrapper">
+                {spinner ? spinner : <span>[]</span>}
+              </span>)
+          )}
+        </span>) :
+        <slot />}
     </Tag>}
 </button-component>
