@@ -103,4 +103,16 @@
   .nova-button.variant-plain {
     @apply text-(--nova-color-palette-fg);
   }
+
+  .nova-button .loading-content {
+    @apply contents;
+  }
+
+  .nova-button .loading-content .spinner-wrapper {
+    @apply absolute inline-flex items-center justify-center start-1/2 top-1/2 -translate-1/2;
+  }
+
+  .nova-button .loading-content .text-wrapper {
+    @apply invisible contents;
+  }
 }
