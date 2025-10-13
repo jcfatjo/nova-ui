@@ -2,10 +2,8 @@
 import "../styles/global.css";
 
 import Buttons from "../components/Buttons/Buttons.astro";
-import Typography from "../components/Typography/Typography.astro";
 
 import Link from "../components/Typography/Link/Link.astro";
-import Button from "../components/Buttons/Button/Button.astro";
 ---
 
 <html lang="en">
@@ -20,68 +18,42 @@ import Button from "../components/Buttons/Button/Button.astro";
   <div class="p-16">
     <h1 class="text-2xl font-bold">Link</h1>
 
-    <div class="flex flex-col gap-2">
-      <Link variant="underline" href="#" colorPalette="blue">
-        Link (Underline)
+    <Link href="#">Visit Chakra UI</Link>
+
+    <br>
+
+    <Link variant="underline" href="#">
+      Link (Underline)
+    </Link>
+
+    <br>
+
+    <Link variant="plain" href="#">
+      Link (Plain)
+    </Link>
+
+    <br>
+
+    <p>
+      Visit the{" "}
+      <Link
+        href="https://chakra-ui.com"
+        variant="underline"
+        colorPalette="teal"
+      >
+        Chakra UI
       </Link>
-      <Link variant="plain" href="#">
-        Link (Plain)
-      </Link>
+      {" "}
+      website
+    </p>
 
-      <p>
-        Visit the
-        <Link
-          variant="underline"
-          href="https://chakra-ui.com"
-          colorPalette="red"
-        >
-          Chakra UI
-        </Link>
-        website
-      </p>
+    <br>
 
-      <Link href="#" asChild colorPalette="green">
-        <p>This is a p that is a link</p>
-      </Link>
-    </div>
-
-    <h1 class="mt-8 text-2xl font-bold">Button</h1>
-
-    <Button class="rounded-full" size="xs" variant="outline">Normal Button</Button>
-    <Button size="2xl" variant="ghost" colorPalette="red" asChild>
-      <a href="#">Link Button</a>
-    </Button>
-    <Button asChild>
-      <div>ASD</div>
-      <div>DSA</div>
-    </Button>
-    <Button colorPalette="green">
-      <div>ASD</div>
-      <div>DSA</div>
-    </Button>
-
-    <div class="flex flex-col gap-2">
-      {["gray", "red", "orange", "yellow", "green", "teal", "blue", "cyan", "purple", "pink"].map((colorPalette) => (
-        <div class="flex flex-row gap-10">
-          <p class="min-w-[8ch]">{colorPalette}</p>
-          <Button colorPalette={colorPalette}>Button</Button>
-          <Button colorPalette={colorPalette} variant="outline">
-            Button
-          </Button>
-          <Button colorPalette={colorPalette} variant="surface">
-            Button
-          </Button>
-          <Button colorPalette={colorPalette} variant="subtle">
-            Button
-          </Button>
-        </div>
-      ))}
-    </div>
-
-    <Button colorPalette="teal" loading>Normal Button</Button>
+    <Link href="#" as="p" colorPalette="purple">
+      Visit Chakra UI []
+    </Link>
   </div>
 
   <Buttons />
-  <Typography />
 </body>
 </html>
