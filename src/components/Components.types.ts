@@ -1,10 +1,5 @@
 import colors from "tailwindcss/colors";
 
-export type OldBaseProps = {
-  as?: astroHTML.JSX.Element;
-  asChild?: boolean;
-};
-
 export type BaseProps = {
   as?: astroHTML.JSX.Element;
 };
