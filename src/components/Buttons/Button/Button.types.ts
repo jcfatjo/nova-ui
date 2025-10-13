@@ -1,5 +1,5 @@
 import type { HTMLAttributes } from "astro/types";
-import type { ColorProps, OldBaseProps } from "../../Components.types.ts";
+import type { BaseProps, ColorProps } from "../../Components.types.ts";
 
 type Size = "2xs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
 
@@ -17,6 +17,6 @@ type ButtonLoadingProps = {
 type ButtonBaseProps = {
   size?: Size;
   variant?: Variant;
-} & OldBaseProps & ColorProps & ButtonLoadingProps;
+} & BaseProps & ColorProps & ButtonLoadingProps;
 
 export type ButtonProps = ButtonBaseProps & HTMLAttributes<"button">
