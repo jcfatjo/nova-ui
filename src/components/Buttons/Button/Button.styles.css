@@ -1,107 +1,134 @@
 @reference "tailwindcss";
 
+@custom-variant size-2xs (&.size-2xs);
+@custom-variant size-xs (&.size-xs);
+@custom-variant size-sm (&.size-sm);
+@custom-variant size-md (&.size-md);
+@custom-variant size-lg (&.size-lg);
+@custom-variant size-xl (&.size-xl);
+@custom-variant size-2xl (&.size-2xl);
+
+@custom-variant variant-solid (&.variant-solid);
+@custom-variant variant-subtle (&.variant-subtle);
+@custom-variant variant-surface (&.variant-surface);
+@custom-variant variant-outline (&.variant-outline);
+@custom-variant variant-ghost (&.variant-ghost);
+@custom-variant variant-plain (&.variant-plain);
+
 @layer components {
   .nova-button {
     --transition-properties: background-color, border-color, color, fill, stroke, opacity, box-shadow, translate, transform;
+
     @apply inline-flex appearance-none items-center justify-center select-none relative rounded-sm whitespace-nowrap align-middle border-1 border-transparent cursor-pointer outline-0 leading-[1.2] isolate font-medium transition-(--transition-properties) duration-200;
 
     @variant disabled {
       @apply cursor-not-allowed opacity-50;
     }
-  }
 
-  .nova-button.size-2xs {
-    @apply h-6 min-w-6 text-xs px-2 gap-1;
-  }
-
-  .nova-button.size-xs {
-    @apply h-8 min-w-8 text-xs px-2.5 gap-1;
-  }
-
-  .nova-button.size-sm {
-    @apply h-9 min-w-9 text-sm px-3.5 gap-2;
-  }
-
-  .nova-button.size-md {
-    @apply h-10 min-w-10 text-sm px-4 gap-2;
-  }
-
-  .nova-button.size-lg {
-    @apply h-11 min-w-11 text-base px-5 gap-3;
-  }
-
-  .nova-button.size-xl {
-    @apply h-12 min-w-12 text-base px-5 gap-2.5;
-  }
-
-  .nova-button.size-2xl {
-    @apply h-16 min-w-16 text-lg px-7 gap-3;
-  }
-
-  .nova-button.variant-solid {
-    @apply bg-(--nova-color-palette-solid) text-(--nova-color-palette-contrast) border-transparent;
-
-    @variant hover {
-      @apply bg-(--nova-color-palette-solid)/90;
+    @variant size-2xs {
+      @apply h-6 min-w-6 text-xs px-2 gap-1;
     }
 
-    @variant aria-expanded {
-      @apply bg-(--nova-color-palette-solid)/90;
-    }
-  }
-
-  .nova-button.variant-subtle {
-    @apply bg-(--nova-color-palette-subtle) text-(--nova-color-palette-fg) border-transparent;
-
-    @variant hover {
-      @apply bg-(--nova-color-palette-muted);
+    @variant size-xs {
+      @apply h-8 min-w-8 text-xs px-2.5 gap-1;
     }
 
-    @variant aria-expanded {
-      @apply bg-(--nova-color-palette-muted);
-    }
-  }
-
-  .nova-button.variant-surface {
-    --shadow-color: var(--nova-color-palette-muted);
-    --button-shadow: 0 0 0 1px var(--shadow-color);
-    @apply bg-(--nova-color-palette-subtle) text-(--nova-color-palette-fg) shadow-(--button-shadow) border-transparent;
-
-    @variant hover {
-      @apply bg-(--nova-color-palette-muted);
+    @variant size-sm {
+      @apply h-9 min-w-9 text-sm px-3.5 gap-2;
     }
 
-    @variant aria-expanded {
-      @apply bg-(--nova-color-palette-muted);
-    }
-  }
-
-  .nova-button.variant-outline {
-    @apply border-(--nova-color-palette-muted) text-(--nova-color-palette-fg);
-
-    @variant hover {
-      @apply bg-(--nova-color-palette-subtle);
+    @variant size-md {
+      @apply h-10 min-w-10 text-sm px-4 gap-2;
     }
 
-    @variant aria-expanded {
-      @apply bg-(--nova-color-palette-subtle);
-    }
-  }
-
-  .nova-button.variant-ghost {
-    @apply bg-transparent text-(--nova-color-palette-fg);
-
-    @variant hover {
-      @apply bg-(--nova-color-palette-subtle);
+    @variant size-lg {
+      @apply h-11 min-w-11 text-base px-5 gap-3;
     }
 
-    @variant aria-expanded {
-      @apply bg-(--nova-color-palette-subtle);
+    @variant size-xl {
+      @apply h-12 min-w-12 text-base px-5 gap-2.5;
     }
-  }
 
-  .nova-button.variant-plain {
-    @apply text-(--nova-color-palette-fg);
+    @variant size-2xl {
+      @apply h-16 min-w-16 text-lg px-7 gap-3;
+    }
+
+    @variant variant-solid {
+      @apply bg-(--nova-color-palette-solid) text-(--nova-color-palette-contrast) border-transparent;
+
+      @variant not-disabled {
+        @variant hover {
+          @apply bg-(--nova-color-palette-solid)/90;
+        }
+
+        @variant aria-expanded {
+          @apply bg-(--nova-color-palette-solid)/90;
+        }
+      }
+    }
+
+    @variant variant-subtle {
+      @apply bg-(--nova-color-palette-subtle) text-(--nova-color-palette-fg) border-transparent;
+
+      @variant not-disabled {
+        @variant hover {
+          @apply bg-(--nova-color-palette-muted);
+        }
+
+        @variant aria-expanded {
+          @apply bg-(--nova-color-palette-muted);
+        }
+      }
+    }
+
+    @variant variant-surface {
+      --shadow-color: var(--nova-color-palette-muted);
+      --button-shadow: 0 0 0 1px var(--shadow-color);
+
+      @apply bg-(--nova-color-palette-subtle) text-(--nova-color-palette-fg) shadow-(--button-shadow) border-transparent;
+
+      @variant not-disabled {
+        @variant hover {
+          @apply bg-(--nova-color-palette-muted);
+        }
+
+        @variant aria-expanded {
+          @apply bg-(--nova-color-palette-muted);
+        }
+      }
+    }
+
+    @variant variant-outline {
+      @apply border-(--nova-color-palette-muted) text-(--nova-color-palette-fg);
+
+      @variant not-disabled {
+        @variant hover {
+          @apply bg-(--nova-color-palette-subtle);
+        }
+
+        @variant aria-expanded {
+          @apply bg-(--nova-color-palette-subtle);
+        }
+      }
+    }
+
+    @variant variant-ghost {
+      @apply bg-transparent text-(--nova-color-palette-fg);
+
+      @variant not-disabled {
+        @variant hover {
+          @apply bg-(--nova-color-palette-subtle);
+        }
+
+        @variant aria-expanded {
+          @apply bg-(--nova-color-palette-subtle);
+        }
+      }
+    }
+
+    @variant variant-plain {
+      @apply text-(--nova-color-palette-fg);
+    }
   }
 
   .nova-button .loading-content {
