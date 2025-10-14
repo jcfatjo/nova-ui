@@ -1,0 +1,11 @@
+---
+import Button from "../Button/Button.astro";
+
+import type { ButtonsBaseProps } from "../Buttons.types.ts";
+
+const { ...props }: ButtonsBaseProps = Astro.props;
+---
+
+<Button icon {...props}>
+  <slot />
+</Button>
