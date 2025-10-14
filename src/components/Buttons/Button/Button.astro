@@ -1,22 +1,22 @@
 ---
 import "./Button.styles.css";
 
-import { getClassList } from "./Button.ts";
+import { getClassList, getDisabledState } from "./Button.ts";
 
 import type { ButtonProps } from "./Button.types.ts";
 
 const { ...buttonProps }: ButtonProps = Astro.props;
+const classList = getClassList(buttonProps);
 const {
   class: className,
   as: Tag = "button",
-  loading = false,
+  disabled,
+  loading,
   loadingText,
   spinner,
   spinnerPlacement = "start",
   ...props
 } = buttonProps;
-const { disabled = false } = buttonProps;
-const classList = getClassList(buttonProps);
 ---
 
 <Tag class:list={[classList, className]} {...props} data-loading={loading} disabled={disabled || loading}>
