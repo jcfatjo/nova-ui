@@ -7,16 +7,13 @@ type Variant = "solid" | "subtle" | "surface" | "outline" | "ghost" | "plain";
 
 type SpinnerPlacement = "start" | "end";
 
-type ButtonLoadingProps = {
+type ButtonBaseProps = {
+  size?: Size;
+  variant?: Variant;
   loading?: boolean;
   loadingText?: astroHTML.JSX.Element;
   spinner?: astroHTML.JSX.Element;
   spinnerPlacement?: SpinnerPlacement;
-};
-
-type ButtonBaseProps = {
-  size?: Size;
-  variant?: Variant;
-} & BaseProps & ColorProps & ButtonLoadingProps;
+} & BaseProps & ColorProps;
 
 export type ButtonProps = ButtonBaseProps & HTMLAttributes<"button">
