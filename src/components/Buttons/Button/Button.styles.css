@@ -15,6 +15,8 @@
 @custom-variant variant-ghost (&.variant-ghost);
 @custom-variant variant-plain (&.variant-plain);
 
+@custom-variant icon (&[icon]);
+
 @layer components {
   .nova-button {
     --transition-properties: background-color, border-color, color, fill, stroke, opacity, box-shadow, translate, transform;
@@ -128,6 +130,10 @@
 
     @variant variant-plain {
       @apply text-(--nova-color-palette-fg);
+    }
+
+    @variant icon {
+      @apply p-0;
     }
   }
 
