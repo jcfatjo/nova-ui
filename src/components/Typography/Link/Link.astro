@@ -6,10 +6,11 @@ import { getClassList } from "./Link.ts";
 import type { LinkProps } from "./Link.types.ts";
 
 const { ...linkProps }: LinkProps = Astro.props;
-const { class: className, as: Tag = "a", href, isExternal = false, ...props } = linkProps;
 const classList = getClassList(linkProps);
+const { class: className, as = "a", isExternal = false, ...props } = linkProps;
+const Tag = as as string;
 ---
 
-<Tag class:list={[classList, className]} {href} {...props}>
+<Tag class:list={[classList, className]} rel={isExternal ? "noopener noreferrer" : undefined} {...props}>
   <slot />
 </Tag>
