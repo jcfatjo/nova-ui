@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import IconButton from "../components/Buttons/IconButton/IconButton.astro";
 
 import Link from "../components/Typography/Link/Link.astro";
 import Button from "../components/Buttons/Button/Button.astro";
@@ -119,6 +120,62 @@ const colorPalettes = ["slate", "gray", "zinc", "neutral", "stone", "red", "oran
       <Button loading loadingText="Saving...">
         Click me
       </Button>
+    </div>
+  </div>
+
+  <div class="p-16 space-y-6">
+    <h1 class="text-2xl font-bold">Icon Button</h1>
+
+    <div>
+      <IconButton aria-label="Search database">
+        []
+      </IconButton>
+    </div>
+
+    <div class="flex flex-row gap-6">
+      {["xs", "sm", "md", "lg"].map((size) => (
+        <div class="flex flex-col items-center">
+          <IconButton
+            aria-label="Search database"
+            variant="outline"
+            size={size}
+          >
+            []
+          </IconButton>
+          <p>{size}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="flex flex-row gap-6">
+      {["solid", "subtle", "surface", "outline", "ghost", "plain"].map((variant) => (
+        <div class="flex flex-col items-center">
+          <IconButton
+            aria-label="Call support"
+            variant={variant}
+          >
+            []
+          </IconButton>
+          <p>{variant}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="flex flex-row gap-6">
+      {colorPalettes.map((colorPalette) => (
+        <IconButton
+          aria-label="Call support"
+          {colorPalette}
+        >
+          []
+        </IconButton>
+      ))}
+    </div>
+
+    <div>
+      <IconButton aria-label="Call support" class="rounded-full">
+        []
+      </IconButton>
     </div>
   </div>
 </body>
