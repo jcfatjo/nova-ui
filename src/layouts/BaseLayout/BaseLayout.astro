@@ -1,12 +1,17 @@
 ---
+// ===== Styles
 import "../../styles/global.css";
 
-import type { BaseLayoutProps } from "./BaseLayout.types.ts";
-
+// ===== Components
+import Heading from "../../components/Typography/Heading/Heading.astro";
 import Link from "../../components/Typography/Link/Link.astro";
 
-export const DEFAULT_PAGE_TITLE = "Nova UI";
-export const DEFAULT_PAGE_DESCRIPTION = "Astro UI library";
+// ===== Types
+import type { BaseLayoutProps } from "./BaseLayout.types.ts";
+
+// ===== Props
+const DEFAULT_PAGE_TITLE = "Nova UI";
+const DEFAULT_PAGE_DESCRIPTION = "Astro UI library";
 
 const {
   title = DEFAULT_PAGE_TITLE,
@@ -40,7 +45,7 @@ const {
     <nav>
       <ul>
         <li class="mb-2">
-          <h2 class="text-lg font-bold">Typography</h2>
+          <Heading level="4">Typography</Heading>
           <ul>
             <li>
               <Link href="/nova-link">Link</Link>
@@ -48,10 +53,13 @@ const {
             <li>
               <Link href="/nova-text">Text</Link>
             </li>
+            <li>
+              <Link href="/nova-heading">Heading</Link>
+            </li>
           </ul>
         </li>
         <li class="mb-2">
-          <h2 class="text-lg font-bold">Buttons</h2>
+          <Heading level="4">Buttons</Heading>
           <ul>
             <li>
               <Link href="/nova-button">Button</Link>
