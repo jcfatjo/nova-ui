@@ -3,9 +3,7 @@ import type { BaseProps, ColorProps } from "../../Components.types.ts";
 
 export type Variant = "plain" | "underline";
 
-type LinkBaseProps = {
+export type LinkProps = {
   variant?: Variant;
   isExternal?: boolean;
-} & BaseProps & ColorProps;
-
-export type LinkProps = LinkBaseProps & HTMLAttributes<"a">;
+} & BaseProps & ColorProps & HTMLAttributes<"a">;
