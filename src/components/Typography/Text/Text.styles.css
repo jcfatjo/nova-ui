@@ -1,0 +1,35 @@
+@reference "tailwindcss";
+
+@custom-variant size-xs (&.size-xs);
+@custom-variant size-sm (&.size-sm);
+@custom-variant size-md (&.size-md);
+@custom-variant size-lg (&.size-lg);
+@custom-variant size-xl (&.size-xl);
+
+@custom-variant line-clamp (&.line-clamp);
+
+@layer components {
+  .nova-text {
+    @apply text-(--nova-color-palette-fg);
+
+    @variant size-xs {
+      @apply text-xs font-extralight;
+    }
+
+    @variant size-sm {
+      @apply text-sm font-light;
+    }
+
+    @variant size-md {
+      @apply text-base font-normal;
+    }
+
+    @variant size-lg {
+      @apply text-lg font-medium;
+    }
+
+    @variant size-xl {
+      @apply text-xl font-semibold;
+    }
+  }
+}

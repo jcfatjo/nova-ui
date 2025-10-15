@@ -1,0 +1,27 @@
+---
+// ===== Styles
+import "./Text.styles.css";
+
+// ===== Types
+import type { TextProps } from "./Text.types.ts";
+
+// ===== Scripts
+import { getTextClassList } from "./Text.ts";
+
+// ===== Props
+const {
+  as: Tag = "p",
+  class: className,
+  size,
+  truncate,
+  lineClamp,
+  colorPalette,
+  ...props
+}: TextProps = Astro.props;
+
+const classList = getTextClassList({ size, truncate, lineClamp, colorPalette });
+---
+
+<Tag class:list={[classList, className]} style={lineClamp ? `--line-clamp: ${lineClamp}` : undefined} {...props}>
+  <slot />
+</Tag>

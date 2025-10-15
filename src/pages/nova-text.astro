@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../layouts/BaseLayout/BaseLayout.astro";
+import Text from "../components/Typography/Text/Text.astro";
+
+const sizes = ["xs", "sm", "md", "lg", "xl"];
+---
+
+<BaseLayout>
+  <div class="p-16 space-y-6">
+    <h1 class="text-2xl font-bold">Text</h1>
+
+    <div>
+      <Text>Sphinx of black quartz, judge my vow.</Text>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold mb-2">Sizes</h2>
+      {sizes.map((size) => (
+        <div>
+          <Text size={size}>
+            Nova UI
+          </Text>
+        </div>
+      ))}
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold mb-2">Truncation</h2>
+      <div class="max-w-[300px]">
+        <Text truncate>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </Text>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold mb-2">Line clamp</h2>
+      <div class="max-w-[300px] mb-2">
+        <Text lineClamp="2">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.
+        </Text>
+      </div>
+      <div class="max-w-[300px]">
+        <Text lineClamp="10">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.
+        </Text>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
