@@ -1,3 +1,4 @@
+import type { HTMLAttributes } from "astro/types";
 import type { BaseProps, ColorProps } from "../Components.types.ts";
 
 type Size = "2xs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
@@ -13,4 +14,4 @@ export type ButtonsBaseProps = {
   loadingText?: astroHTML.JSX.Element;
   spinner?: astroHTML.JSX.Element;
   spinnerPlacement?: SpinnerPlacement;
-} & BaseProps & ColorProps;
+} & BaseProps & ColorProps & HTMLAttributes<"button">;
