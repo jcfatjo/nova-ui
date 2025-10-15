@@ -2,9 +2,14 @@
 import BaseLayout from "../layouts/BaseLayout/BaseLayout.astro";
 import { default as NovaButton } from "../components/Buttons/Button/Button.astro";
 
-const colorPalettes = ["slate", "gray", "zinc", "neutral", "stone", "red", "orange", "amber",
-  "yellow", "lime", "green", "emerald", "teal", "cyan", "sky", "blue",
-  "indigo", "violet", "purple", "fuchsia", "pink", "rose"];
+const sizes = ["2xs", "xs", "sm", "md", "lg", "xl", "2xl"];
+
+const variants = ["solid", "subtle", "surface", "outline", "ghost", "plain"];
+
+const colorPalettes = [
+  "slate", "gray", "zinc", "neutral", "stone", "red", "orange", "amber", "yellow", "lime", "green",
+  "emerald", "teal", "cyan", "sky", "blue", "indigo", "violet", "purple", "fuchsia", "pink", "rose",
+];
 ---
 
 <BaseLayout>
@@ -16,20 +21,23 @@ const colorPalettes = ["slate", "gray", "zinc", "neutral", "stone", "red", "oran
     </div>
 
     <div class="flex flex-row gap-6">
-      <NovaButton size="xs">Button (xs)</NovaButton>
-      <NovaButton size="sm">Button (sm)</NovaButton>
-      <NovaButton size="md">Button (md)</NovaButton>
-      <NovaButton size="lg">Button (lg)</NovaButton>
-      <NovaButton size="xl">Button (xl)</NovaButton>
+      {sizes.map((size) => (
+        <div class="flex flex-col items-center">
+          <NovaButton size={size}>
+            Button ({size})
+          </NovaButton>
+        </div>
+      ))}
     </div>
 
     <div class="flex flex-row gap-6">
-      <NovaButton variant="solid">Solid</NovaButton>
-      <NovaButton variant="subtle">Subtle</NovaButton>
-      <NovaButton variant="surface">Surface</NovaButton>
-      <NovaButton variant="outline">Outline</NovaButton>
-      <NovaButton variant="ghost">Ghost</NovaButton>
-      <NovaButton variant="plain">Plain</NovaButton>
+      {variants.map((variant) => (
+        <div class="flex flex-col items-center">
+          <NovaButton variant={variant}>
+            {`${variant[0].toUpperCase()}${variant.slice(1)}`}
+          </NovaButton>
+        </div>
+      ))}
     </div>
 
     <div class="flex flex-row gap-6">
