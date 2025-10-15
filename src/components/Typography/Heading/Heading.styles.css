@@ -1,0 +1,38 @@
+@reference "tailwindcss";
+
+@custom-variant level-1 (&.level-1);
+@custom-variant level-2 (&.level-2);
+@custom-variant level-3 (&.level-3);
+@custom-variant level-4 (&.level-4);
+@custom-variant level-5 (&.level-5);
+@custom-variant level-6 (&.level-6);
+
+@layer components {
+  .nova-heading {
+    @apply text-(--nova-color-palette-fg);
+
+    @variant level-1 {
+      @apply text-6xl font-black;
+    }
+
+    @variant level-2 {
+      @apply text-5xl font-extrabold;
+    }
+
+    @variant level-3 {
+      @apply text-4xl font-bold;
+    }
+
+    @variant level-4 {
+      @apply text-3xl font-semibold;
+    }
+
+    @variant level-5 {
+      @apply text-2xl font-medium;
+    }
+
+    @variant level-6 {
+      @apply text-xl font-normal;
+    }
+  }
+}

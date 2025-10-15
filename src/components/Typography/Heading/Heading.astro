@@ -1,0 +1,25 @@
+---
+// ===== Styles
+import "./Heading.styles.css";
+
+// ===== Types
+import type { HeadingProps } from "./Heading.types.ts";
+
+// ===== Scripts
+import { getHeadingClassList } from "./Heading.ts";
+
+// ===== Props
+const {
+  as: Tag = "p",
+  class: className,
+  level,
+  colorPalette,
+  ...props
+}: HeadingProps = Astro.props;
+
+const classList = getHeadingClassList({ level, colorPalette });
+---
+
+<Tag class:list={[classList, className]} {...props}>
+  <slot />
+</Tag>
