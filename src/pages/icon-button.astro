@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../layouts/BaseLayout/BaseLayout.astro";
+import { default as NovaIconButton } from "../components/Buttons/Button/Button.astro";
+
+const colorPalettes = ["slate", "gray", "zinc", "neutral", "stone", "red", "orange", "amber",
+  "yellow", "lime", "green", "emerald", "teal", "cyan", "sky", "blue",
+  "indigo", "violet", "purple", "fuchsia", "pink", "rose"];
+---
+
+<BaseLayout>
+  <div class="p-16 space-y-6">
+    <h1 class="text-2xl font-bold">Icon Button</h1>
+
+    <div>
+      <NovaIconButton aria-label="Search database">
+        []
+      </NovaIconButton>
+    </div>
+
+    <div class="flex flex-row gap-6">
+      {["xs", "sm", "md", "lg"].map((size) => (
+        <div class="flex flex-col items-center">
+          <NovaIconButton
+            aria-label="Search database"
+            variant="outline"
+            size={size}
+          >
+            []
+          </NovaIconButton>
+          <p>{size}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="flex flex-row gap-6">
+      {["solid", "subtle", "surface", "outline", "ghost", "plain"].map((variant) => (
+        <div class="flex flex-col items-center">
+          <NovaIconButton
+            aria-label="Call support"
+            variant={variant}
+          >
+            []
+          </NovaIconButton>
+          <p>{variant}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="flex flex-row gap-6">
+      {colorPalettes.map((colorPalette) => (
+        <NovaIconButton
+          aria-label="Call support"
+          {colorPalette}
+        >
+          []
+        </NovaIconButton>
+      ))}
+    </div>
+
+    <div>
+      <NovaIconButton aria-label="Call support" class="rounded-full">
+        []
+      </NovaIconButton>
+    </div>
+  </div>
+</BaseLayout>
