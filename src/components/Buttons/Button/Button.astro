@@ -1,15 +1,16 @@
 ---
 import "./Button.styles.css";
 
-import { getClassList, getDisabledState } from "./Button.ts";
+import { getClassList } from "./Button.ts";
 
 import type { ButtonProps } from "./Button.types.ts";
 
-const { ...buttonProps }: ButtonProps = Astro.props;
-const classList = getClassList(buttonProps);
+const { size, variant, colorPalette, ...buttonProps }: ButtonProps = Astro.props;
+const classList = getClassList({ size, variant, colorPalette });
 const {
   class: className,
   as: Tag = "button",
+  type = "button",
   disabled,
   loading,
   loadingText,
@@ -19,7 +20,7 @@ const {
 } = buttonProps;
 ---
 
-<Tag class:list={[classList, className]} {...props} data-loading={loading} disabled={disabled || loading}>
+<Tag class:list={[classList, className]} {type} data-loading={loading} disabled={disabled || loading} {...props}>
   {loading ?
     (<span class="loading-content">
       {spinnerPlacement === "start" && (
