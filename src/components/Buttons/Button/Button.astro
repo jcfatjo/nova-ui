@@ -1,15 +1,20 @@
 ---
+// ===== Styles
 import "./Button.styles.css";
 
-import { getClassList } from "./Button.ts";
-
+// ===== Types
 import type { ButtonProps } from "./Button.types.ts";
 
-const { size, variant, colorPalette, ...buttonProps }: ButtonProps = Astro.props;
-const classList = getClassList({ size, variant, colorPalette });
+// ===== Scripts
+import { getButtonClassList } from "./Button.ts";
+
+// ===== Props
 const {
-  class: className,
   as: Tag = "button",
+  class: className,
+  size,
+  variant,
+  colorPalette,
   type = "button",
   disabled,
   loading,
@@ -17,7 +22,9 @@ const {
   spinner,
   spinnerPlacement = "start",
   ...props
-} = buttonProps;
+}: ButtonProps = Astro.props;
+
+const classList = getButtonClassList({ size, variant, colorPalette });
 ---
 
 <Tag class:list={[classList, className]} {type} data-loading={loading} disabled={disabled || loading} {...props}>

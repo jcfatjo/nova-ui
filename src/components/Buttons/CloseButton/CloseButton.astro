@@ -1,11 +1,17 @@
 ---
+// ===== Components
 import IconButton from "../IconButton/IconButton.astro";
 
+// ===== Types
 import type { ButtonsBaseProps } from "../Buttons.types.ts";
 
+// ===== Props
 const hasSlot = Astro.slots.has("default");
 
-const { "aria-label": ariaLabel = "Close", ...props }: ButtonsBaseProps = Astro.props;
+const {
+  "aria-label": ariaLabel = "Close",
+  ...props
+}: ButtonsBaseProps = Astro.props;
 ---
 
 <IconButton aria-label={ariaLabel} {...props}>
