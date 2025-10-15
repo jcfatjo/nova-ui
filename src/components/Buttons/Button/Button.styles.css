@@ -17,6 +17,8 @@
 
 @custom-variant icon (&[icon]);
 
+@custom-variant svg (:where(svg));
+
 @layer components {
   .nova-button {
     --transition-properties: background-color, border-color, color, fill, stroke, opacity, box-shadow, translate, transform;
@@ -29,30 +31,58 @@
 
     @variant size-2xs {
       @apply h-6 min-w-6 text-xs px-2 gap-1;
+
+      @variant svg {
+        @apply text-[1.2em] shrink-0 size-3.5;
+      }
     }
 
     @variant size-xs {
       @apply h-8 min-w-8 text-xs px-2.5 gap-1;
+
+      @variant svg {
+        @apply text-[1.2em] shrink-0 size-4;
+      }
     }
 
     @variant size-sm {
       @apply h-9 min-w-9 text-sm px-3.5 gap-2;
+
+      @variant svg {
+        @apply text-[1.2em] shrink-0 size-4;
+      }
     }
 
     @variant size-md {
       @apply h-10 min-w-10 text-sm px-4 gap-2;
+
+      @variant svg {
+        @apply text-[1.2em] shrink-0 size-5;
+      }
     }
 
     @variant size-lg {
       @apply h-11 min-w-11 text-base px-5 gap-3;
+
+      @variant svg {
+        @apply text-[1.2em] shrink-0 size-5;
+      }
     }
 
     @variant size-xl {
       @apply h-12 min-w-12 text-base px-5 gap-2.5;
+
+      @variant svg {
+        @apply text-[1.2em] shrink-0 size-5;
+      }
     }
 
     @variant size-2xl {
       @apply h-16 min-w-16 text-lg px-7 gap-3;
+
+      @variant svg {
+        @apply text-[1.2em] shrink-0 size-6;
+      }
     }
 
     @variant variant-solid {
@@ -134,6 +164,10 @@
 
     @variant icon {
       @apply p-0;
+
+      .close-icon {
+        @apply fill-current;
+      }
     }
   }
 
