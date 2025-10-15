@@ -1,0 +1,106 @@
+---
+import BaseLayout from "../layouts/BaseLayout/BaseLayout.astro";
+import Button from "../components/Buttons/Button/Button.astro";
+import Text from "../components/Typography/Text/Text.astro";
+
+const sizes = ["2xs", "xs", "sm", "md", "lg", "xl", "2xl"];
+
+const variants = ["solid", "subtle", "surface", "outline", "ghost", "plain"];
+
+const colorPalettes = [
+  "slate", "gray", "zinc", "neutral", "stone", "red", "orange", "amber", "yellow", "lime", "green",
+  "emerald", "teal", "cyan", "sky", "blue", "indigo", "violet", "purple", "fuchsia", "pink", "rose",
+];
+---
+
+<BaseLayout>
+  <div class="p-16 space-y-6">
+    <h1 class="text-2xl font-bold">Button</h1>
+
+    <div>
+      <Button>Button</Button>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold mb-2">Sizes</h2>
+      <div class="flex flex-row gap-6 items-center">
+        {sizes.map((size) => (
+          <div class="flex flex-col items-center">
+            <Button size={size}>
+              Button ({size})
+            </Button>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold mb-2">Variants</h2>
+      <div class="flex flex-row gap-6">
+        {variants.map((variant) => (
+          <div class="flex flex-col items-center">
+            <Button variant={variant}>
+              {`${variant[0].toUpperCase()}${variant.slice(1)}`}
+            </Button>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold mb-2">Icon</h2>
+      <div class="flex flex-row gap-6">
+        <Button colorPalette="teal" variant="solid">
+          [] Email
+        </Button>
+        <Button colorPalette="teal" variant="outline">
+          Call us []
+        </Button>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold mb-2">Colors</h2>
+      <div class="flex flex-col gap-6">
+        {colorPalettes.map((colorPalette) => (
+          <div class="flex flex-row items-center gap-6">
+            <Text class="min-w-[8ch]">
+              {`${colorPalette[0].toUpperCase()}${colorPalette.slice(1)}`}
+            </Text>
+            <Button colorPalette={colorPalette}>
+              Button
+            </Button>
+            <Button colorPalette={colorPalette} variant="outline">
+              Button
+            </Button>
+            <Button colorPalette={colorPalette} variant="surface">
+              Button
+            </Button>
+            <Button colorPalette={colorPalette} variant="subtle">
+              Button
+            </Button>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold mb-2">Disabled</h2>
+      <Button disabled>
+        Button
+      </Button>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold mb-2">Loading</h2>
+      <div class="flex flex-row gap-6">
+        <Button loading>
+          Click me
+        </Button>
+        <Button loading loadingText="Saving...">
+          Click me
+        </Button>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout/BaseLayout.astro";
-import { default as NovaIconButton } from "../components/Buttons/IconButton/IconButton.astro";
+
+import HamburgerButton from "../components/Buttons/HamburgerButton/HamburgerButton.astro";
+import Text from "../components/Typography/Text/Text.astro";
 
 const sizes = ["2xs", "xs", "sm", "md", "lg", "xl", "2xl"];
 
@@ -14,10 +16,10 @@ const colorPalettes = [
 
 <BaseLayout>
   <div class="p-16 space-y-6">
-    <h1 class="text-2xl font-bold">Icon Button</h1>
+    <h1 class="text-2xl font-bold">Hamburger Button</h1>
 
     <div>
-      <NovaIconButton aria-label="Search database">[]</NovaIconButton>
+      <HamburgerButton />
     </div>
 
     <div>
@@ -25,8 +27,8 @@ const colorPalettes = [
       <div class="flex flex-row gap-6 items-end">
         {sizes.map((size) => (
           <div class="flex flex-col items-center">
-            <NovaIconButton aria-label="Search database" variant="outline" {size}>[]</NovaIconButton>
-            <p>{size}</p>
+            <HamburgerButton variant="outline" {size} />
+            <Text size="xs">{size}</Text>
           </div>
         ))}
       </div>
@@ -37,8 +39,8 @@ const colorPalettes = [
       <div class="flex flex-row gap-6">
         {variants.map((variant) => (
           <div class="flex flex-col items-center">
-            <NovaIconButton aria-label="Call support" {variant}>[]</NovaIconButton>
-            <p>{`${variant[0].toUpperCase()}${variant.slice(1)}`}</p>
+            <HamburgerButton {variant} />
+            <Text size="xs">{`${variant[0].toUpperCase()}${variant.slice(1)}`}</Text>
           </div>
         ))}
       </div>
@@ -49,7 +51,7 @@ const colorPalettes = [
       <div class="flex flex-row gap-6">
         {colorPalettes.map((colorPalette) => (
           <div class="flex flex-col items-center">
-            <NovaIconButton aria-label="Call support" {colorPalette}>[]</NovaIconButton>
+            <HamburgerButton {colorPalette} />
             <p>{`${colorPalette[0].toUpperCase()}${colorPalette.slice(1)}`}</p>
           </div>
         ))}
@@ -57,8 +59,8 @@ const colorPalettes = [
     </div>
 
     <div>
-      <h2 class="text-xl font-bold mb-2">Rounded</h2>
-      <NovaIconButton aria-label="Call support" class="rounded-full">[]</NovaIconButton>
+      <h2 class="text-xl font-bold mb-2">Custom icon</h2>
+      <HamburgerButton variant="ghost" aria-label="Open">[]</HamburgerButton>
     </div>
   </div>
 </BaseLayout>

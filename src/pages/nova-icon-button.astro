@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout/BaseLayout.astro";
-
-import { default as NovaHamburgerButton } from "../components/Buttons/HamburgerButton/HamburgerButton.astro";
+import IconButton from "../components/Buttons/IconButton/IconButton.astro";
 
 const sizes = ["2xs", "xs", "sm", "md", "lg", "xl", "2xl"];
 
@@ -15,10 +14,10 @@ const colorPalettes = [
 
 <BaseLayout>
   <div class="p-16 space-y-6">
-    <h1 class="text-2xl font-bold">Hamburger Button</h1>
+    <h1 class="text-2xl font-bold">Icon Button</h1>
 
     <div>
-      <NovaHamburgerButton />
+      <IconButton aria-label="Search database">[]</IconButton>
     </div>
 
     <div>
@@ -26,7 +25,7 @@ const colorPalettes = [
       <div class="flex flex-row gap-6 items-end">
         {sizes.map((size) => (
           <div class="flex flex-col items-center">
-            <NovaHamburgerButton variant="outline" {size} />
+            <IconButton aria-label="Search database" variant="outline" {size}>[]</IconButton>
             <p>{size}</p>
           </div>
         ))}
@@ -38,7 +37,7 @@ const colorPalettes = [
       <div class="flex flex-row gap-6">
         {variants.map((variant) => (
           <div class="flex flex-col items-center">
-            <NovaHamburgerButton {variant} />
+            <IconButton aria-label="Call support" {variant}>[]</IconButton>
             <p>{`${variant[0].toUpperCase()}${variant.slice(1)}`}</p>
           </div>
         ))}
@@ -50,7 +49,7 @@ const colorPalettes = [
       <div class="flex flex-row gap-6">
         {colorPalettes.map((colorPalette) => (
           <div class="flex flex-col items-center">
-            <NovaHamburgerButton {colorPalette} />
+            <IconButton aria-label="Call support" {colorPalette}>[]</IconButton>
             <p>{`${colorPalette[0].toUpperCase()}${colorPalette.slice(1)}`}</p>
           </div>
         ))}
@@ -58,8 +57,8 @@ const colorPalettes = [
     </div>
 
     <div>
-      <h2 class="text-xl font-bold mb-2">Custom icon</h2>
-      <NovaHamburgerButton variant="ghost" aria-label="Open">[]</NovaHamburgerButton>
+      <h2 class="text-xl font-bold mb-2">Rounded</h2>
+      <IconButton aria-label="Call support" class="rounded-full">[]</IconButton>
     </div>
   </div>
 </BaseLayout>
