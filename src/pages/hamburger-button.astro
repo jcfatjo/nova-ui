@@ -1,0 +1,65 @@
+---
+import BaseLayout from "../layouts/BaseLayout/BaseLayout.astro";
+
+import { default as NovaHamburgerButton } from "../components/Buttons/HamburgerButton/HamburgerButton.astro";
+
+const sizes = ["2xs", "xs", "sm", "md", "lg", "xl", "2xl"];
+
+const variants = ["solid", "subtle", "surface", "outline", "ghost", "plain"];
+
+const colorPalettes = [
+  "slate", "gray", "zinc", "neutral", "stone", "red", "orange", "amber", "yellow", "lime", "green",
+  "emerald", "teal", "cyan", "sky", "blue", "indigo", "violet", "purple", "fuchsia", "pink", "rose",
+];
+---
+
+<BaseLayout>
+  <div class="p-16 space-y-6">
+    <h1 class="text-2xl font-bold">Hamburger Button</h1>
+
+    <div>
+      <NovaHamburgerButton />
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold mb-2">Sizes</h2>
+      <div class="flex flex-row gap-6 items-end">
+        {sizes.map((size) => (
+          <div class="flex flex-col items-center">
+            <NovaHamburgerButton variant="outline" {size} />
+            <p>{size}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold mb-2">Variants</h2>
+      <div class="flex flex-row gap-6">
+        {variants.map((variant) => (
+          <div class="flex flex-col items-center">
+            <NovaHamburgerButton {variant} />
+            <p>{`${variant[0].toUpperCase()}${variant.slice(1)}`}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold mb-2">Colors</h2>
+      <div class="flex flex-row gap-6">
+        {colorPalettes.map((colorPalette) => (
+          <div class="flex flex-col items-center">
+            <NovaHamburgerButton {colorPalette} />
+            <p>{`${colorPalette[0].toUpperCase()}${colorPalette.slice(1)}`}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-bold mb-2">Custom icon</h2>
+      <NovaHamburgerButton variant="ghost" aria-label="Open">[]</NovaHamburgerButton>
+    </div>
+  </div>
+</BaseLayout>
