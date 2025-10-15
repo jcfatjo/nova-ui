@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../layouts/BaseLayout/BaseLayout.astro";
+import { default as NovaButton } from "../components/Buttons/Button/Button.astro";
+
+const colorPalettes = ["slate", "gray", "zinc", "neutral", "stone", "red", "orange", "amber",
+  "yellow", "lime", "green", "emerald", "teal", "cyan", "sky", "blue",
+  "indigo", "violet", "purple", "fuchsia", "pink", "rose"];
+---
+
+<BaseLayout>
+  <div class="p-16 space-y-6">
+    <h1 class="text-2xl font-bold">Button</h1>
+
+    <div>
+      <NovaButton>Button</NovaButton>
+    </div>
+
+    <div class="flex flex-row gap-6">
+      <NovaButton size="xs">Button (xs)</NovaButton>
+      <NovaButton size="sm">Button (sm)</NovaButton>
+      <NovaButton size="md">Button (md)</NovaButton>
+      <NovaButton size="lg">Button (lg)</NovaButton>
+      <NovaButton size="xl">Button (xl)</NovaButton>
+    </div>
+
+    <div class="flex flex-row gap-6">
+      <NovaButton variant="solid">Solid</NovaButton>
+      <NovaButton variant="subtle">Subtle</NovaButton>
+      <NovaButton variant="surface">Surface</NovaButton>
+      <NovaButton variant="outline">Outline</NovaButton>
+      <NovaButton variant="ghost">Ghost</NovaButton>
+      <NovaButton variant="plain">Plain</NovaButton>
+    </div>
+
+    <div class="flex flex-row gap-6">
+      <NovaButton colorPalette="teal" variant="solid">
+        [] Email
+      </NovaButton>
+      <NovaButton colorPalette="teal" variant="outline">
+        Call us []
+      </NovaButton>
+    </div>
+
+    <div class="flex flex-col gap-6">
+      {colorPalettes.map((colorPalette) => (
+        <div class="flex flex-row gap-6">
+          <p class="min-w-[8ch]">{colorPalette}</p>
+          <NovaButton colorPalette={colorPalette}>Button</NovaButton>
+          <NovaButton colorPalette={colorPalette} variant="outline">
+            Button
+          </NovaButton>
+          <NovaButton colorPalette={colorPalette} variant="surface">
+            Button
+          </NovaButton>
+          <NovaButton colorPalette={colorPalette} variant="subtle">
+            Button
+          </NovaButton>
+        </div>
+      ))}
+    </div>
+
+    <div>
+      <NovaButton disabled>Button</NovaButton>
+    </div>
+
+    <div class="flex flex-row gap-6">
+      <NovaButton loading>Click me</NovaButton>
+      <NovaButton loading loadingText="Saving...">
+        Click me
+      </NovaButton>
+    </div>
+  </div>
+</BaseLayout>
