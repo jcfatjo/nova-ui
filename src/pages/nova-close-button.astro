@@ -1,8 +1,10 @@
 ---
+// ===== Components
 import BaseLayout from "../layouts/BaseLayout/BaseLayout.astro";
-
+import Heading from "../components/Typography/Heading/Heading.astro";
 import CloseButton from "../components/Buttons/CloseButton/CloseButton.astro";
 
+// ===== Props
 const sizes = ["2xs", "xs", "sm", "md", "lg", "xl", "2xl"];
 
 const variants = ["solid", "subtle", "surface", "outline", "ghost", "plain"];
@@ -15,14 +17,14 @@ const colorPalettes = [
 
 <BaseLayout>
   <div class="p-16 space-y-6">
-    <h1 class="text-2xl font-bold">Close Button</h1>
+    <Heading level="1">Close Button</Heading>
 
     <div>
       <CloseButton />
     </div>
 
     <div>
-      <h2 class="text-xl font-bold mb-2">Sizes</h2>
+      <Heading level="2" class="mb-2">Sizes</Heading>
       <div class="flex flex-row gap-6 items-end">
         {sizes.map((size) => (
           <div class="flex flex-col items-center">
@@ -34,7 +36,7 @@ const colorPalettes = [
     </div>
 
     <div>
-      <h2 class="text-xl font-bold mb-2">Variants</h2>
+      <Heading level="2" class="mb-2">Variants</Heading>
       <div class="flex flex-row gap-6">
         {variants.map((variant) => (
           <div class="flex flex-col items-center">
@@ -46,7 +48,7 @@ const colorPalettes = [
     </div>
 
     <div>
-      <h2 class="text-xl font-bold mb-2">Colors</h2>
+      <Heading level="2" class="mb-2">Colors</Heading>
       <div class="flex flex-row gap-6">
         {colorPalettes.map((colorPalette) => (
           <div class="flex flex-col items-center">
@@ -58,7 +60,7 @@ const colorPalettes = [
     </div>
 
     <div>
-      <h2 class="text-xl font-bold mb-2">Custom icon</h2>
+      <Heading level="2" class="mb-2">Custom icon</Heading>
       <CloseButton variant="ghost" aria-label="Close">[]</CloseButton>
     </div>
   </div>
