@@ -17,14 +17,14 @@ const colorPalettes = [
 
 <BaseLayout>
   <div class="p-16 space-y-6">
-    <Heading level="1">Close Button</Heading>
+    <Heading as="h1" size="2xl">Close Button</Heading>
 
     <div>
       <CloseButton />
     </div>
 
     <div>
-      <Heading level="2" class="mb-2">Sizes</Heading>
+      <Heading as="h2" class="mb-2">Sizes</Heading>
       <div class="flex flex-row gap-6 items-end">
         {sizes.map((size) => (
           <div class="flex flex-col items-center">
@@ -36,7 +36,7 @@ const colorPalettes = [
     </div>
 
     <div>
-      <Heading level="2" class="mb-2">Variants</Heading>
+      <Heading as="h2" class="mb-2">Variants</Heading>
       <div class="flex flex-row gap-6">
         {variants.map((variant) => (
           <div class="flex flex-col items-center">
@@ -48,7 +48,7 @@ const colorPalettes = [
     </div>
 
     <div>
-      <Heading level="2" class="mb-2">Colors</Heading>
+      <Heading as="h2" class="mb-2">Colors</Heading>
       <div class="flex flex-row gap-6">
         {colorPalettes.map((colorPalette) => (
           <div class="flex flex-col items-center">
@@ -60,7 +60,7 @@ const colorPalettes = [
     </div>
 
     <div>
-      <Heading level="2" class="mb-2">Custom icon</Heading>
+      <Heading as="h2" class="mb-2">Custom icon</Heading>
       <CloseButton variant="ghost" aria-label="Close">[]</CloseButton>
     </div>
   </div>

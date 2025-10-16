@@ -10,14 +10,14 @@ import { getHeadingClassList } from "./Heading.ts";
 
 // ===== Props
 const {
-  as: Tag = "p",
+  as: Tag = "h2",
   class: className,
-  level,
+  size,
   colorPalette,
   ...props
 }: HeadingProps = Astro.props;
 
-const classList = getHeadingClassList({ level, colorPalette });
+const classList = getHeadingClassList({ size, colorPalette });
 ---
 
 <Tag class:list={[classList, className]} {...props}>

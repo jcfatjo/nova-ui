@@ -1,9 +1,9 @@
 import type { HeadingProps } from "./Heading.types.ts";
 
-export function getHeadingClassList({ level = "2", colorPalette = "gray" }: HeadingProps) {
+export function getHeadingClassList({ size = "xl", colorPalette = "gray" }: HeadingProps) {
   return [
     "nova-heading",
-    `level-${level}`,
+    `size-${size}`,
     `color-palette-${colorPalette}`,
   ];
 }
