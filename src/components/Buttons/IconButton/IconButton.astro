@@ -9,6 +9,6 @@ import type { ButtonsBaseProps } from "../Buttons.types.ts";
 const { ...props }: ButtonsBaseProps = Astro.props;
 ---
 
-<Button icon {...props}>
+<Button iconOnly {...props}>
   <slot />
 </Button>
