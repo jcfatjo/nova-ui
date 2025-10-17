@@ -1,0 +1,24 @@
+---
+// ===== Styles
+import "./Stack.styles.css";
+
+// ===== Types
+import type { StackProps } from "./Stack.types.ts";
+
+// ===== Scripts
+import { getStackClassList } from "./Stack.ts";
+
+// ===== Props
+const {
+  as: Tag = "div",
+  class: className,
+  direction,
+  ...props
+}: StackProps = Astro.props;
+
+const classList = getStackClassList({ direction });
+---
+
+<Tag class:list={[classList, className]} {...props}>
+  <slot />
+</Tag>

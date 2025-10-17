@@ -1,0 +1,29 @@
+@reference "tailwindcss";
+
+@custom-variant direction-row (&.direction-row);
+@custom-variant direction-col (&.direction-col);
+
+@custom-variant hstack (&.hstack);
+@custom-variant vstack (&.vstack);
+
+@layer components {
+  .nova-stack {
+    @apply flex gap-2;
+
+    @variant direction-row {
+      @apply flex-row;
+    }
+
+    @variant direction-col {
+      @apply flex-col;
+    }
+
+    @variant hstack {
+      @apply items-center;
+    }
+
+    @variant vstack {
+      @apply items-center;
+    }
+  }
+}
