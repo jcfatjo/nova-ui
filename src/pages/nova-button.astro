@@ -6,9 +6,11 @@ import Button from "../components/Buttons/Button/Button.astro";
 import Text from "../components/Typography/Text/Text.astro";
 
 // ===== Props
-const sizes = ["2xs", "xs", "sm", "md", "lg", "xl", "2xl"];
+const shapes = ["sharp", "rounded", "circular"];
 
-const variants = ["solid", "subtle", "surface", "outline", "ghost", "plain"];
+const sizes = ["xs", "sm", "md", "lg", "xl"];
+
+const fillings = ["solid", "tonal", "surface", "outline", "clear", "text"];
 
 const colorPalettes = [
   "slate", "gray", "zinc", "neutral", "stone", "red", "orange", "amber", "yellow", "lime", "green",
@@ -25,27 +27,34 @@ const colorPalettes = [
     </div>
 
     <div>
-      <Heading as="h2" class="mb-2">Sizes</Heading>
+      <Heading as="h2" class="mb-2">Shapes</Heading>
       <div class="flex flex-row gap-6 items-center">
-        {sizes.map((size) => (
-          <div class="flex flex-col items-center">
-            <Button size={size}>
-              Button ({size})
-            </Button>
-          </div>
+        {shapes.map((shape) => (
+          <Button {shape}>
+            {`${shape[0].toUpperCase()}${shape.slice(1)}`}
+          </Button>
         ))}
       </div>
     </div>
 
     <div>
-      <Heading as="h2" class="mb-2">Variants</Heading>
+      <Heading as="h2" class="mb-2">Fillings</Heading>
       <div class="flex flex-row gap-6">
-        {variants.map((variant) => (
-          <div class="flex flex-col items-center">
-            <Button variant={variant}>
-              {`${variant[0].toUpperCase()}${variant.slice(1)}`}
-            </Button>
-          </div>
+        {fillings.map((fill) => (
+          <Button {fill}>
+            {`${fill[0].toUpperCase()}${fill.slice(1)}`}
+          </Button>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <Heading as="h2" class="mb-2">Sizes</Heading>
+      <div class="flex flex-row gap-6 items-center">
+        {sizes.map((size) => (
+          <Button size={size}>
+            Button ({size})
+          </Button>
         ))}
       </div>
     </div>
@@ -73,13 +82,13 @@ const colorPalettes = [
             <Button colorPalette={colorPalette}>
               Button
             </Button>
-            <Button colorPalette={colorPalette} variant="outline">
+            <Button colorPalette={colorPalette} fill="outline">
               Button
             </Button>
-            <Button colorPalette={colorPalette} variant="surface">
+            <Button colorPalette={colorPalette} fill="surface">
               Button
             </Button>
-            <Button colorPalette={colorPalette} variant="subtle">
+            <Button colorPalette={colorPalette} fill="tonal">
               Button
             </Button>
           </div>
@@ -101,6 +110,12 @@ const colorPalettes = [
           Click me
         </Button>
         <Button loading loadingText="Saving...">
+          Click me
+        </Button>
+        <Button loading loadingText="Saving..." loadingSpinner="()">
+          Click me
+        </Button>
+        <Button loading loadingText="Saving..." loadingSpinner="()" spinnerPlacement="end">
           Click me
         </Button>
       </div>
