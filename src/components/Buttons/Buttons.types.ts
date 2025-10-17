@@ -1,17 +1,23 @@
 import type { HTMLAttributes } from "astro/types";
 import type { BaseProps, ColorProps } from "../Components.types.ts";
 
-type Size = "2xs" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
+type Shape = "sharp" | "rounded" | "circular";
 
-type Variant = "solid" | "subtle" | "surface" | "outline" | "ghost" | "plain";
+type Fill = "solid" | "tonal" | "surface" | "outline" | "clear" | "text";
+
+type Size = "xs" | "sm" | "md" | "lg" | "xl";
 
 type SpinnerPlacement = "start" | "end";
 
-export type ButtonsBaseProps = {
-  size?: Size;
-  variant?: Variant;
+interface ButtonsLoadingProps {
   loading?: boolean;
   loadingText?: astroHTML.JSX.Element;
-  spinner?: astroHTML.JSX.Element;
+  loadingSpinner?: astroHTML.JSX.Element;
   spinnerPlacement?: SpinnerPlacement;
-} & BaseProps & ColorProps & HTMLAttributes<"button">;
+}
+
+export interface ButtonsBaseProps extends BaseProps, ButtonsLoadingProps, ColorProps, HTMLAttributes<"button"> {
+  shape?: Shape;
+  fill?: Fill;
+  size?: Size;
+}
