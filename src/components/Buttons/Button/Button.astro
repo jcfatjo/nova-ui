@@ -12,19 +12,21 @@ import { getButtonClassList } from "./Button.ts";
 const {
   as: Tag = "button",
   class: className,
-  size,
-  variant,
-  colorPalette,
   type = "button",
   disabled,
+  shape,
+  fill,
+  size,
+  colorPalette,
+  iconOnly,
   loading,
   loadingText,
-  spinner,
+  loadingSpinner,
   spinnerPlacement = "start",
   ...props
 }: ButtonProps = Astro.props;
 
-const classList = getButtonClassList({ size, variant, colorPalette });
+const classList = getButtonClassList({ shape, fill, size, colorPalette, iconOnly });
 ---
 
 <Tag class:list={[classList, className]} {type} data-loading={loading} disabled={disabled || loading} {...props}>
@@ -32,22 +34,20 @@ const classList = getButtonClassList({ size, variant, colorPalette });
     (<span class="loading-content">
       {spinnerPlacement === "start" && (
         loadingText ?
-          (spinner ? spinner : <span>[]</span>) :
+          (loadingSpinner ?? <span>[]</span>) :
           (<span class="spinner-wrapper">
-            {spinner ? spinner : <span>[]</span>}
+            {loadingSpinner ?? <span>[]</span>}
           </span>)
       )}
-      {loadingText ?
-        loadingText :
+      {loadingText ??
         <span class="text-wrapper">
           <slot />
         </span>}
       {spinnerPlacement === "end" && (
         loadingText ?
-          (spinner ? spinner : <span>[]</span>) :
-          (<span class="spinner-wrapper">{spinner ?
-            spinner :
-            <span>[]</span>}
+          (loadingSpinner ?? <span>[]</span>) :
+          (<span class="spinner-wrapper">
+            {loadingSpinner ?? <span>[]</span>}
           </span>)
       )}
     </span>) :
