@@ -1,0 +1,47 @@
+---
+// ===== Components
+import BaseLayout from "../layouts/BaseLayout/BaseLayout.astro";
+import Heading from "../components/Typography/Heading/Heading.astro";
+import Stack from "../components/Layout/Stack/Stack.astro";
+import HStack from "../components/Layout/HStack/HStack.astro";
+import VStack from "../components/Layout/VStack/VStack.astro";
+---
+
+<BaseLayout>
+  <div class="p-16 space-y-6">
+    <Heading as="h1" size="2xl">Stack</Heading>
+
+    <Stack>
+      <div class="h-20 bg-gray-500" />
+      <div class="h-20 bg-gray-500" />
+      <div class="h-20 bg-gray-500" />
+    </Stack>
+
+    <div>
+      <Heading as="h2" class="mb-2">Horizontal</Heading>
+      <Stack direction="row" class="h-20">
+        <div class="w-full bg-gray-500" />
+        <div class="w-full bg-gray-500" />
+        <div class="w-full bg-gray-500" />
+      </Stack>
+    </div>
+
+    <div>
+      <Heading as="h2" class="mb-2">HStack</Heading>
+      <HStack>
+        <div class="w-full h-10 bg-gray-500" />
+        <div class="w-full h-5 bg-gray-500" />
+        <div class="w-full h-20 bg-gray-500" />
+      </HStack>
+    </div>
+
+    <div>
+      <Heading as="h2" class="mb-2">VStack</Heading>
+      <VStack>
+        <div class="w-[50%] h-20 bg-gray-500" />
+        <div class="w-[25%] h-20 bg-gray-500" />
+        <div class="w-full h-20 bg-gray-500" />
+      </VStack>
+    </div>
+  </div>
+</BaseLayout>
