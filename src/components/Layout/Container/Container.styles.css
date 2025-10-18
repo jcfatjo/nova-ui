@@ -1,0 +1,18 @@
+@reference "tailwindcss";
+
+@custom-variant center-content (&.center-content);
+@custom-variant fluid (&.fluid);
+
+@layer components {
+  .nova-container {
+    @apply relative container mx-auto px-4 md:px-6 lg:px-8;
+
+    @variant center-content {
+      @apply flex flex-col items-center;
+    }
+
+    @variant fluid {
+      @apply max-w-full;
+    }
+  }
+}

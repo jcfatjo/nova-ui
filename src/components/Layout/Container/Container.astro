@@ -1,0 +1,24 @@
+---
+// ===== Styles
+import "./Container.styles.css";
+
+// ===== Types
+import type { ContainerProps } from "./Container.types.ts";
+
+// ===== Scripts
+import { getContainerClassList } from "./Container.ts";
+
+// ===== Props
+const {
+  as: Tag = "div",
+  class: className,
+  centerContent,
+  fluid,
+}: ContainerProps = Astro.props;
+
+const classList = getContainerClassList({ centerContent, fluid });
+---
+
+<Tag class:list={[classList, className]}>
+  <slot />
+</Tag>
