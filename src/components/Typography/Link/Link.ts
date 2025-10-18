@@ -1,9 +1,9 @@
 import type { LinkProps } from "./Link.types.ts";
 
-export function getLinkClassList({ variant = "plain", colorPalette = "gray" }: LinkProps) {
+export function getLinkClassList({ underline = "hover", colorPalette = "gray" }: LinkProps) {
   return [
     "nova-link",
-    `variant-${variant}`,
+    `underline-${underline}`,
     `color-palette-${colorPalette}`,
   ];
 }

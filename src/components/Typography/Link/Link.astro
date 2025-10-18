@@ -12,15 +12,15 @@ import { getLinkClassList } from "./Link.ts";
 const {
   as: Tag = "a",
   class: className,
-  variant,
-  isExternal = false,
+  underline,
+  external = false,
   colorPalette,
   ...props
 }: LinkProps = Astro.props;
 
-const classList = getLinkClassList({ variant, colorPalette });
+const classList = getLinkClassList({ underline, colorPalette });
 ---
 
-<Tag class:list={[classList, className]} rel={isExternal ? "noopener noreferrer" : undefined} {...props}>
+<Tag class:list={[classList, className]} rel={external ? "noopener noreferrer" : undefined} {...props}>
   <slot />
 </Tag>

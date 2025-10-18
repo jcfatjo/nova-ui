@@ -14,34 +14,40 @@ import Link from "../components/Typography/Link/Link.astro";
     </div>
 
     <div>
-      <Link variant="underline" href="#">
-        Link (Underline)
-      </Link>
-    </div>
+      <Heading class="mb-2">Underline</Heading>
 
-    <div>
-      <Link variant="plain" href="#">
-        Link (Plain)
-      </Link>
+      <div>
+        <Link underline="always" href="#">
+          Link (Underline always)
+        </Link>
+      </div>
+
+      <div>
+        <Link underline="hover" href="#">
+          Link (Underline on hover)
+        </Link>
+      </div>
+
+      <div>
+        <Link underline="never" href="#">
+          Link (Underline never)
+        </Link>
+      </div>
     </div>
 
     <div>
       <p>
         Visit the{" "}
-        <Link
-          href="#"
-          variant="underline"
-          colorPalette="teal"
-        >
+        <Link href="#" underline="always" colorPalette="teal">
           Nova UI
         </Link>
-        {" "}
-        website
+        {" "}website
       </p>
     </div>
 
     <div>
-      <Link href="#" as="p" colorPalette="purple">
+      <Heading class="mb-2">External</Heading>
+      <Link href="#" as="p" colorPalette="purple" external>
         Visit Nova UI []
       </Link>
     </div>
