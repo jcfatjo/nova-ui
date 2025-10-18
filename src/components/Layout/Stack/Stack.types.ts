@@ -5,5 +5,4 @@ type Direction = "row" | "col";
 
 export type StackProps = {
   direction?: Direction;
-  horizontal?: boolean;
 } & BaseProps & HTMLAttributes<"div">
