@@ -1,15 +1,19 @@
 @reference "tailwindcss";
 
-@custom-variant variant-plain (&.variant-plain);
-@custom-variant variant-underline (&.variant-underline);
+@custom-variant underline-never (&.underline-never);
+@custom-variant underline-hover (&.underline-hover);
+@custom-variant underline-always (&.underline-always);
 
 @layer components {
   .nova-link {
     --mix-textDecorationColor: color-mix(in srgb, currentColor 20%, transparent);
-
     @apply inline-flex items-center outline-none gap-1.5 cursor-pointer rounded-xs;
 
-    @variant variant-plain {
+    @variant underline-never {
+      @apply text-(--nova-color-palette-fg);
+    }
+
+    @variant underline-hover {
       @apply text-(--nova-color-palette-fg);
 
       @variant hover {
@@ -17,7 +21,7 @@
       }
     }
 
-    @variant variant-underline {
+    @variant underline-always {
       @apply text-(--nova-color-palette-fg) underline underline-offset-[3px] decoration-(--mix-textDecorationColor);
     }
   }
