@@ -1,47 +1,60 @@
 ---
 // ===== Components
 import BaseLayout from "../layouts/BaseLayout/BaseLayout.astro";
+import Container from "../components/Layout/Container/Container.astro";
 import Heading from "../components/Typography/Heading/Heading.astro";
 import Stack from "../components/Layout/Stack/Stack.astro";
 import HStack from "../components/Layout/Stack/HStack/HStack.astro";
 import VStack from "../components/Layout/Stack/VStack/VStack.astro";
+import Box from "../components/Layout/Box/Box.astro";
 ---
 
 <BaseLayout>
-  <div class="p-16 space-y-6">
+  <Container as="section" class="py-12 space-y-6">
     <Heading as="h1" size="2xl">Stack</Heading>
 
-    <Stack>
-      <div class="h-20 bg-gray-200" />
-      <div class="h-20 bg-gray-200" />
-      <div class="h-20 bg-gray-200" />
-    </Stack>
+    <Box>
+      <Heading class="mb-2">Basic usage</Heading>
+      <Box class="border border-gray-300 rounded-md p-8">
+        <Stack>
+          <Box class="h-20 bg-gray-200" />
+          <Box class="h-20 bg-gray-200" />
+          <Box class="h-20 bg-gray-200" />
+        </Stack>
+      </Box>
+    </Box>
 
-    <div>
+    <Box>
       <Heading class="mb-2">Horizontal</Heading>
-      <Stack direction="row" class="h-20">
-        <div class="w-full bg-gray-200" />
-        <div class="w-full bg-gray-200" />
-        <div class="w-full bg-gray-200" />
-      </Stack>
-    </div>
+      <Box class="border border-gray-300 rounded-md p-8">
+        <Stack direction="row" class="h-20">
+          <Box class="w-full bg-gray-200" />
+          <Box class="w-full bg-gray-200" />
+          <Box class="w-full bg-gray-200" />
+        </Stack>
+      </Box>
+    </Box>
 
-    <div>
+    <Box>
       <Heading class="mb-2">HStack</Heading>
-      <HStack>
-        <div class="w-full h-10 bg-gray-200" />
-        <div class="w-full h-5 bg-gray-200" />
-        <div class="w-full h-20 bg-gray-200" />
-      </HStack>
-    </div>
+      <Box class="border border-gray-300 rounded-md p-8">
+        <HStack>
+          <Box class="w-full h-10 bg-gray-200" />
+          <Box class="w-full h-5 bg-gray-200" />
+          <Box class="w-full h-20 bg-gray-200" />
+        </HStack>
+      </Box>
+    </Box>
 
-    <div>
+    <Box>
       <Heading class="mb-2">VStack</Heading>
-      <VStack>
-        <div class="w-[50%] h-20 bg-gray-200" />
-        <div class="w-[25%] h-20 bg-gray-200" />
-        <div class="w-full h-20 bg-gray-200" />
-      </VStack>
-    </div>
-  </div>
+      <Box class="border border-gray-300 rounded-md p-8">
+        <VStack>
+          <Box class="w-[50%] h-20 bg-gray-200" />
+          <Box class="w-[25%] h-20 bg-gray-200" />
+          <Box class="w-full h-20 bg-gray-200" />
+        </VStack>
+      </Box>
+    </Box>
+  </Container>
 </BaseLayout>

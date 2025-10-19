@@ -1,63 +1,74 @@
 ---
 // ===== Components
 import BaseLayout from "../layouts/BaseLayout/BaseLayout.astro";
+import Container from "../components/Layout/Container/Container.astro";
 import Heading from "../components/Typography/Heading/Heading.astro";
 import Text from "../components/Typography/Text/Text.astro";
+import Box from "../components/Layout/Box/Box.astro";
 
 // ===== Props
 const sizes = ["xs", "sm", "md", "lg"];
 ---
 
 <BaseLayout>
-  <div class="p-16 space-y-6">
+  <Container as="section" class="py-12 space-y-6">
     <Heading as="h1" size="2xl">Text</Heading>
 
-    <div>
-      <Text>Sphinx of black quartz, judge my vow.</Text>
-    </div>
+    <Box>
+      <Heading class="mb-2">Basic usage</Heading>
+      <Box class="border border-gray-300 rounded-md p-8">
+        <Text>Sphinx of black quartz, judge my vow.</Text>
+      </Box>
+    </Box>
 
-    <div>
+    <Box>
       <Heading class="mb-2">Sizes</Heading>
-      {sizes.map((size) => (
-        <div>
-          <Text {size}>
-            Nova UI ({size})
-          </Text>
-        </div>
-      ))}
-    </div>
+      <Box class="border border-gray-300 rounded-md p-8">
+        {sizes.map((size) => (
+          <div>
+            <Text {size}>
+              Nova UI ({size})
+            </Text>
+          </div>
+        ))}
+      </Box>
+    </Box>
 
-    <div>
+    <Box>
       <Heading class="mb-2">Truncation</Heading>
-      <div class="max-w-[300px]">
-        <Text truncate>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </Text>
-      </div>
-    </div>
+      <Box class="border border-gray-300 rounded-md p-8">
+        <Box class="max-w-[300px]">
+          <Text truncate>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+        </Box>
+      </Box>
+    </Box>
 
-    <div>
+    <Box>
       <Heading class="mb-2">Line clamp</Heading>
-      <div class="max-w-[300px] mb-2">
-        <Text lineClamp="2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.
-        </Text>
-      </div>
-      <div class="max-w-[300px]">
-        <Text lineClamp="10">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.
-        </Text>
-      </div>
-    </div>
-  </div>
+      <Box class="border border-gray-300 rounded-md p-8">
+        <Box class="max-w-[300px] mb-2">
+          <Text lineClamp="2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat.
+          </Text>
+        </Box>
+        <Box class="max-w-[300px]">
+          <Text lineClamp="10">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat.
+          </Text>
+        </Box>
+      </Box>
+    </Box>
+  </Container>
 </BaseLayout>

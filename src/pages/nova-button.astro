@@ -1,8 +1,10 @@
 ---
 // ===== Components
 import BaseLayout from "../layouts/BaseLayout/BaseLayout.astro";
+import Container from "../components/Layout/Container/Container.astro";
 import Heading from "../components/Typography/Heading/Heading.astro";
 import Button from "../components/Buttons/Button/Button.astro";
+import Box from "../components/Layout/Box/Box.astro";
 import Text from "../components/Typography/Text/Text.astro";
 
 // ===== Props
@@ -19,106 +21,123 @@ const colorPalettes = [
 ---
 
 <BaseLayout>
-  <div class="p-16 space-y-6">
+  <Container as="section" class="py-12 space-y-6">
     <Heading as="h1" size="2xl">Button</Heading>
 
-    <div>
-      <Button>Button</Button>
-    </div>
+    <Box>
+      <Heading class="mb-2">Basic usage</Heading>
+      <Box class="border border-gray-300 rounded-md p-8">
+        <Button>Button</Button>
+      </Box>
+    </Box>
 
-    <div>
+    <Box>
       <Heading class="mb-2">Shapes</Heading>
-      <div class="flex flex-row gap-6 items-center">
-        {shapes.map((shape) => (
-          <Button {shape}>
-            {`${shape[0].toUpperCase()}${shape.slice(1)}`}
-          </Button>
-        ))}
-      </div>
-    </div>
+      <Box class="border border-gray-300 rounded-md p-8">
+        <Box class="flex flex-row gap-6 items-center">
+          {shapes.map((shape) => (
+            <Button {shape}>
+              {`${shape[0].toUpperCase()}${shape.slice(1)}`}
+            </Button>
+          ))}
+        </Box>
+      </Box>
+    </Box>
 
-    <div>
+    <Box>
       <Heading class="mb-2">Fillings</Heading>
-      <div class="flex flex-row gap-6">
-        {fillings.map((fill) => (
-          <Button {fill}>
-            {`${fill[0].toUpperCase()}${fill.slice(1)}`}
-          </Button>
-        ))}
-      </div>
-    </div>
+      <Box class="border border-gray-300 rounded-md p-8">
+        <Box class="flex flex-row gap-6">
+          {fillings.map((fill) => (
+            <Button {fill}>
+              {`${fill[0].toUpperCase()}${fill.slice(1)}`}
+            </Button>
+          ))}
+        </Box>
+      </Box>
+    </Box>
 
-    <div>
+    <Box>
       <Heading class="mb-2">Sizes</Heading>
-      <div class="flex flex-row gap-6 items-center">
-        {sizes.map((size) => (
-          <Button size={size}>
-            Button ({size})
-          </Button>
-        ))}
-      </div>
-    </div>
+      <Box class="border border-gray-300 rounded-md p-8">
+        <Box class="flex flex-row gap-6 items-center">
+          {sizes.map((size) => (
+            <Button size={size}>
+              Button ({size})
+            </Button>
+          ))}
+        </Box>
+      </Box>
+    </Box>
 
-    <div>
+    <Box>
       <Heading class="mb-2">Icon</Heading>
-      <div class="flex flex-row gap-6">
-        <Button colorPalette="teal" variant="solid">
-          [] Email
-        </Button>
-        <Button colorPalette="teal" variant="outline">
-          Call us []
-        </Button>
-      </div>
-    </div>
+      <Box class="border border-gray-300 rounded-md p-8">
+        <Box class="flex flex-row gap-6">
+          <Button colorPalette="teal" variant="solid">
+            [] Email
+          </Button>
+          <Button colorPalette="teal" variant="outline">
+            Call us []
+          </Button>
+        </Box>
+      </Box>
+    </Box>
 
-    <div>
+    <Box>
       <Heading class="mb-2">Colors</Heading>
-      <div class="flex flex-col gap-6">
-        {colorPalettes.map((colorPalette) => (
-          <div class="flex flex-row items-center gap-6">
-            <Text class="min-w-[8ch]">
-              {`${colorPalette[0].toUpperCase()}${colorPalette.slice(1)}`}
-            </Text>
-            <Button colorPalette={colorPalette}>
-              Button
-            </Button>
-            <Button colorPalette={colorPalette} fill="outline">
-              Button
-            </Button>
-            <Button colorPalette={colorPalette} fill="surface">
-              Button
-            </Button>
-            <Button colorPalette={colorPalette} fill="tonal">
-              Button
-            </Button>
-          </div>
-        ))}
-      </div>
-    </div>
+      <Box class="border border-gray-300 rounded-md p-8">
+        <Box class="flex flex-col gap-6">
+          {colorPalettes.map((colorPalette) => (
+            <Box class="flex flex-row items-center gap-6">
+              <Text class="min-w-[8ch]">
+                {`${colorPalette[0].toUpperCase()}${colorPalette.slice(1)}`}
+              </Text>
+              <Button colorPalette={colorPalette}>
+                Button
+              </Button>
+              <Button colorPalette={colorPalette} fill="outline">
+                Button
+              </Button>
+              <Button colorPalette={colorPalette} fill="surface">
+                Button
+              </Button>
+              <Button colorPalette={colorPalette} fill="tonal">
+                Button
+              </Button>
+            </Box>
+          ))}
+        </Box>
+      </Box>
+    </Box>
 
-    <div>
+    <Box>
       <Heading class="mb-2">Disabled</Heading>
-      <Button disabled>
-        Button
-      </Button>
-    </div>
+      <Box class="border border-gray-300 rounded-md p-8">
+        <Button disabled>
+          Button
+        </Button>
+      </Box>
+    </Box>
 
-    <div>
+    <Box>
       <Heading class="mb-2">Loading</Heading>
-      <div class="flex flex-row gap-6">
-        <Button loading>
-          Click me
-        </Button>
-        <Button loading loadingText="Saving...">
-          Click me
-        </Button>
-        <Button loading loadingText="Saving..." loadingSpinner="()">
-          Click me
-        </Button>
-        <Button loading loadingText="Saving..." loadingSpinner="()" spinnerPlacement="end">
-          Click me
-        </Button>
-      </div>
-    </div>
-  </div>
+      <Box class="border border-gray-300 rounded-md p-8">
+        <Box class="flex flex-row gap-6">
+          <Button loading>
+            Click me
+          </Button>
+          <Button loading loadingText="Saving...">
+            Click me
+          </Button>
+          <Button loading loadingText="Saving..." loadingSpinner="()">
+            Click me
+          </Button>
+          <Button loading loadingText="Saving..." loadingSpinner="()" spinnerPlacement="end">
+            Click me
+          </Button>
+        </Box>
+      </Box>
+    </Box>
+  </Container>
 </BaseLayout>
