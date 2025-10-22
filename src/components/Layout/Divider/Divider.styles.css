@@ -1,0 +1,129 @@
+@reference "tailwindcss";
+
+@custom-variant orientation-horizontal (&.orientation-horizontal);
+@custom-variant orientation-vertical (&.orientation-vertical);
+
+@custom-variant position-full (&.position-full);
+@custom-variant position-inset (&.position-inset);
+@custom-variant position-middle (&.position-middle);
+
+@custom-variant line-style-solid (&.line-style-solid);
+@custom-variant line-style-dashed (&.line-style-dashed);
+@custom-variant line-style-dotted (&.line-style-dotted);
+
+@custom-variant thickness-xs (&.thickness-xs);
+@custom-variant thickness-sm (&.thickness-sm);
+@custom-variant thickness-md (&.thickness-md);
+@custom-variant thickness-lg (&.thickness-lg);
+@custom-variant thickness-xl (&.thickness-xl);
+
+@custom-variant with-label (&.with-label);
+
+@custom-variant label-placement-start (&.label-placement-start);
+@custom-variant label-placement-center (&.label-placement-center);
+@custom-variant label-placement-end (&.label-placement-end);
+
+@custom-variant subheader-placement-start (&.subheader-placement-start);
+@custom-variant subheader-placement-end (&.subheader-placement-end);
+
+@layer components {
+  .nova-divider {
+    @apply block border-(--nova-border);
+
+    @variant orientation-horizontal {
+      @apply border-t-(length:--divider-thickness);
+    }
+
+    @variant orientation-vertical {
+      @apply border-s-(length:--divider-thickness);
+    }
+
+    @variant position-full {
+      @apply w-full;
+    }
+
+    @variant position-inset {
+      @apply w-full ms-[72px];
+    }
+
+    @variant position-middle {
+      @apply w-full mx-4;
+    }
+
+    @variant line-style-solid {
+      @apply border-solid;
+    }
+
+    @variant line-style-dashed {
+      @apply border-dashed;
+    }
+
+    @variant line-style-dotted {
+      @apply border-dotted;
+    }
+
+    @variant thickness-xs {
+      --divider-thickness: 0.5px;
+    }
+
+    @variant thickness-sm {
+      --divider-thickness: 1px;
+    }
+
+    @variant thickness-md {
+      --divider-thickness: 2px;
+    }
+
+    @variant thickness-lg {
+      --divider-thickness: 3px;
+    }
+
+    @variant thickness-xl {
+      --divider-thickness: 4px;
+    }
+
+    @variant with-label {
+      @apply flex shrink-0 m-0 text-center border-0 before:content-[''] before:self-center before:border-t-(length:--divider-thickness) after:content-[''] before:border-(--nova-border) after:self-center after:border-t-(length:--divider-thickness) after:border-(--nova-border);
+
+      @variant line-style-solid {
+        @apply before:border-solid after:border-solid;
+      }
+
+      @variant line-style-dashed {
+        @apply before:border-dashed after:border-dashed;
+      }
+
+      @variant line-style-dotted {
+        @apply before:border-dotted after:border-dotted;
+      }
+
+      [slot="label"] {
+        @apply px-2.5;
+      }
+    }
+
+    @variant label-placement-start {
+      @apply before:w-10/100 after:w-90/100;
+    }
+
+    @variant label-placement-center {
+      @apply before:w-full after:w-full;
+    }
+
+    @variant label-placement-end {
+      @apply before:w-90/100 after:w-10/100;
+    }
+
+    @variant subheader-placement-start {
+      [slot="subheader"] {
+        @apply justify-self-start;
+      }
+    }
+
+    @variant subheader-placement-end {
+      [slot="subheader"] {
+        @apply justify-self-end;
+      }
+    }
+  }
+}

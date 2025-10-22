@@ -1,0 +1,46 @@
+---
+// ===== Styles
+import "./Divider.styles.css";
+
+// ===== Types
+import type { DividerProps } from "./Divider.types.ts";
+
+// =====
+import { getDividerClassList } from "./Divider.ts";
+
+const {
+  as: Tag = "div",
+  class: className,
+  orientation = "horizontal",
+  position = "full",
+  lineStyle,
+  thickness,
+  labelPlacement,
+  subheaderPlacement,
+  ...props
+}: DividerProps = Astro.props;
+
+const hasLabel = Astro.slots.has("label");
+const hasSubheader = Astro.slots.has("subheader");
+
+const isShowText = orientation === "horizontal" && position === "full";
+
+const isShowLabel = isShowText && hasLabel;
+const isShowSubheader = isShowText && !isShowLabel && hasSubheader;
+
+const classList = getDividerClassList({
+  orientation,
+  position,
+  lineStyle,
+  thickness,
+  labelPlacement,
+  subheaderPlacement,
+}, isShowLabel, isShowSubheader);
+---
+
+<Tag class:list={[classList, className]} {...props}>
+  {isShowLabel &&
+    <slot name="label" />}
+  {isShowSubheader &&
+    <slot name="subheader" />}
+</Tag>
