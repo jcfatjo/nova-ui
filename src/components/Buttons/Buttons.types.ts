@@ -20,4 +20,5 @@ export interface ButtonsBaseProps extends BaseProps, ButtonsLoadingProps, ColorP
   shape?: Shape;
   fill?: Fill;
   size?: Size;
+  block?: boolean;
 }
