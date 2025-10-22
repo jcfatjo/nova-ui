@@ -5,6 +5,7 @@ export function getButtonClassList(
     shape = "rounded",
     fill = "solid",
     size = "md",
+    block = false,
     colorPalette = "amber",
     iconOnly,
   }: ButtonProps,
@@ -16,6 +17,10 @@ export function getButtonClassList(
     `size-${size}`,
     `color-palette-${colorPalette}`,
   ];
+
+  if (block) {
+    buttonClassList.push("block-button");
+  }
 
   if (iconOnly) {
     buttonClassList.push("icon-only");
