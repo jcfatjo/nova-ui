@@ -1,0 +1,94 @@
+---
+// ===== Components
+import BaseLayout from "../layouts/BaseLayout/BaseLayout.astro";
+import Container from "../components/Layout/Container/Container.astro";
+import Heading from "../components/Typography/Heading/Heading.astro";
+import Divider from "../components/Layout/Divider/Divider.astro";
+import Box from "../components/Layout/Box/Box.astro";
+import Stack from "../components/Layout/Stack/Stack.astro";
+import Text from "../components/Typography/Text/Text.astro";
+
+// ===== Props
+const lineStyles = ["solid", "dashed", "dotted"];
+
+const thicknesses = ["xs", "sm", "md", "lg", "xl"];
+
+const labelPlacements = ["start", "center", "end"];
+
+const subheaderPlacements = ["start", "end"];
+---
+
+<BaseLayout>
+  <Container as="section" class="py-12 space-y-6">
+    <Heading as="h1" size="2xl">Divider</Heading>
+
+    <Box>
+      <Heading class="mb-2">Basic usage</Heading>
+      <Box class="border border-gray-300 rounded-md p-8">
+        <Stack>
+          <Text>First</Text>
+          <Divider />
+          <Text>Second</Text>
+          <Divider />
+          <Text>Third</Text>
+        </Stack>
+      </Box>
+    </Box>
+
+    <Box>
+      <Heading class="mb-2">Line style</Heading>
+      <Box class="border border-gray-300 rounded-md p-8">
+        <Stack>
+          {lineStyles.map(lineStyle => (
+            <Divider {lineStyle}>
+              <Text slot="label">{`${lineStyle[0].toUpperCase()}${lineStyle.slice(1)}`}</Text>
+            </Divider>
+          ))}
+        </Stack>
+      </Box>
+    </Box>
+
+    <Box>
+      <Heading class="mb-2">Thickness</Heading>
+      <Box class="border border-gray-300 rounded-md p-8">
+        <Stack>
+          {thicknesses.map(thickness => (
+            <Divider {thickness}>
+              <Text slot="label">{thickness}</Text>
+            </Divider>
+          ))}
+        </Stack>
+      </Box>
+    </Box>
+
+    <Box>
+      <Heading class="mb-2">Label</Heading>
+      <Box class="border border-gray-300 rounded-md p-8">
+        <Stack>
+          {labelPlacements.map(labelPlacement => (
+            <Divider {labelPlacement}>
+              <Text slot="label">
+                {`${labelPlacement[0].toUpperCase()}${labelPlacement.slice(1)}`}
+              </Text>
+            </Divider>
+          ))}
+        </Stack>
+      </Box>
+    </Box>
+
+    <Box>
+      <Heading class="mb-2">Subheader</Heading>
+      <Box class="border border-gray-300 rounded-md p-8">
+        <Stack>
+          {subheaderPlacements.map(subheaderPlacement => (
+            <Divider {subheaderPlacement}>
+              <Text slot="subheader">
+                {`${subheaderPlacement[0].toUpperCase()}${subheaderPlacement.slice(1)}`}
+              </Text>
+            </Divider>
+          ))}
+        </Stack>
+      </Box>
+    </Box>
+  </Container>
+</BaseLayout>
