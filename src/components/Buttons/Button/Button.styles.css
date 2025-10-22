@@ -17,6 +17,8 @@
 @custom-variant size-lg (&.size-lg);
 @custom-variant size-xl (&.size-xl);
 
+@custom-variant block-button (&.block-button);
+
 @custom-variant icon-only (&.icon-only);
 
 @custom-variant svg (:where(svg));
@@ -158,6 +160,10 @@
       @variant svg {
         @apply text-[1.2em] shrink-0 size-5;
       }
+    }
+
+    @variant block-button {
+      @apply flex w-full;
     }
 
     @variant icon-only {
