@@ -28,6 +28,8 @@ const isShowText = orientation === "horizontal" && position === "full";
 const isShowLabel = isShowText && hasLabel;
 const isShowSubheader = isShowText && !isShowLabel && hasSubheader;
 
+const isPresentation = hasLabel || hasSubheader;
+
 const classList = getDividerClassList({
   orientation,
   position,
@@ -38,7 +40,12 @@ const classList = getDividerClassList({
 }, isShowLabel, isShowSubheader);
 ---
 
-<Tag class:list={[classList, className]} {...props}>
+<Tag
+  class:list={[classList, className]}
+  role={isPresentation ? "presentation" : "separator"}
+  aria-orientation={orientation}
+  {...props}
+>
   {isShowLabel &&
     <slot name="label" />}
   {isShowSubheader &&
