@@ -1,0 +1,14 @@
+---
+// ===== Types
+import type { PortalProps } from "./Portal.types.ts";
+
+// ===== Props
+const {
+  container,
+  disabled,
+}: PortalProps = Astro.props;
+---
+
+<portal-component {container} {disabled} hidden>
+  <slot />
+</portal-component>
