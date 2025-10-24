@@ -6,6 +6,7 @@ import "../../styles/colors.css";
 // ===== Components
 import Heading from "../../components/Typography/Heading/Heading.astro";
 import Link from "../../components/Typography/Link/Link.astro";
+import Utilities from "../../components/Utilities/Utilities.astro";
 
 // ===== Types
 import type { BaseLayoutProps } from "./BaseLayout.types.ts";
@@ -97,5 +98,7 @@ const {
   <main>
     <slot />
   </main>
+
+  <Utilities />
 </body>
 </html>
