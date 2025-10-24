@@ -1,10 +1,10 @@
 import type { HTMLAttributes } from "astro/types";
 import type { BaseProps, ColorProps } from "../../Components.types.ts";
 
-export type Size = "xs" | "sm" | "md" | "lg";
+type Size = "xs" | "sm" | "md" | "lg";
 
-export type TextProps = {
+export interface TextProps extends BaseProps, ColorProps, HTMLAttributes<"p"> {
   size?: Size;
   truncate?: boolean;
   lineClamp?: number;
-} & BaseProps & ColorProps & HTMLAttributes<"p">;
+}

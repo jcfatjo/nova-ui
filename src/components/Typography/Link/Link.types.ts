@@ -1,9 +1,9 @@
 import type { HTMLAttributes } from "astro/types";
 import type { BaseProps, ColorProps } from "../../Components.types.ts";
 
-export type Underline = "never" | "hover" | "always";
+type Underline = "never" | "hover" | "always";
 
-export type LinkProps = {
+export interface LinkProps extends BaseProps, ColorProps, HTMLAttributes<"a"> {
   underline?: Underline;
   external?: boolean;
-} & BaseProps & ColorProps & HTMLAttributes<"a">;
+}

@@ -1,15 +1,15 @@
 import colors from "tailwindcss/colors";
 
-export type BaseProps = {
+export interface BaseProps {
   as?: astroHTML.JSX.Element;
-};
+}
 
 type NestedColorKeys<T> = {
   [K in keyof T]: T[K] extends object ? K : never
 }[keyof T];
 
-export type ColorPalette = NestedColorKeys<typeof colors>;
+type ColorPalette = NestedColorKeys<typeof colors>;
 
-export type ColorProps = {
+export interface ColorProps {
   colorPalette?: ColorPalette;
-};
+}

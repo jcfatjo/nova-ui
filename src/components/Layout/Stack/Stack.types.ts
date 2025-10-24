@@ -3,6 +3,6 @@ import type { BaseProps } from "../../Components.types.ts";
 
 type Direction = "row" | "col";
 
-export type StackProps = {
+export interface StackProps extends BaseProps, HTMLAttributes<"div"> {
   direction?: Direction;
-} & BaseProps & HTMLAttributes<"div">
+}
